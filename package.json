@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:zip": "vue-cli-service build && cd dist && zip -r ../dist.zip . -x \"__MACOSX\" -x \".*\""
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "jquery": "^3.7.1",
+    "swiper": "^11.2.10",
     "vue": "^3.2.13"
   },
   "devDependencies": {

@@ -1,0 +1,97 @@
+/*  ===== 整站文字設定 ===== */
+body{
+    // 基礎字體 font-size , font-weight , letter-spacing: , line-height;
+    @include d-fontF;
+    @include fz(16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1px;
+
+    // default color
+    --color-black: #333333;
+    --color-white: #FFFFFF;
+    --color-gray: #666666;
+    // customize color
+    --color-main: #177338;
+}
+
+/*  ===== 整站標題設定 ===== */
+.title-main-share{
+    @include d-fontF;
+    @include fz(32);
+    @include ls(2,32);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include media-down(lg){
+        @include fz(28);
+    }
+
+    &.center {
+        text-align: center;
+    }
+}
+
+.title-medium-share{
+    @include d-fontF;
+    @include fz(28);
+    font-weight: 700;
+    @include ls( 2,28);
+    line-height: normal;
+    color: var(--color-black);
+
+    @include media-down(lg){
+        @include fz(24);
+    }
+
+    &.center{
+        text-align: center
+    }
+
+    &.blue {
+        color: var(--color-main) ;
+    }
+
+    &.black {
+        color: var(--color-black) ;
+    }
+}
+
+.title-small-share{
+    @include d-fontF;
+    @include fz(22);
+    @include ls(2,22);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.8px;
+
+    &.center{
+        text-align: center
+    }
+}
+
+.title-en {
+    @include en-fontF;
+    font-size: 78px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background: linear-gradient(87deg, rgba(44, 131, 71, 0.50) 0.94%, rgba(44, 131, 71, 0.00) 106.61%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-down(lg){
+        @include fz(68);
+    }
+
+    @include media-down(xs){
+        @include fz(42);
+    }
+    
+}

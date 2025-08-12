@@ -1,0 +1,37 @@
+/*  ===== 整站container設定 ===== */
+.container-share {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 50px;
+
+    @include media-down(xl){
+        padding: 0px 30px;
+    }
+
+    @include media-down(sm){
+        padding: 0px 20px;
+    }
+}
+
+/*  ===== 共用padding設定 ===== */
+.padding-share {
+    padding: 100px 0 ;
+
+    @include media-down(lg) {
+        padding: 80px 0 ;
+    }
+
+    @include media-down(sm) {
+        padding: 50px 0 ;
+    }
+}
+
+.padding-small-share {
+    padding: 50px 0 ;
+
+    @include media-down (lg) {
+        padding: 30px 0 ;
+    }
+}
