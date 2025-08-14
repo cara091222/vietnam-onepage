@@ -101,9 +101,9 @@ export default {
       @include d-flex(center, center, column);
     }
 
-    @include media-down(sm) {
-      width: 120px;
-    }
+    // @include media-down(sm) {
+    //   width: 120px;
+    // }
   }
 
   .app-container.menu-show .nav-wrap {
@@ -209,7 +209,7 @@ export default {
         top: 0rem;
 
         > span {
-          width: 20px;
+          width: 25px;
           height: 3px;
           position: absolute;
           background: var(--color-main);
