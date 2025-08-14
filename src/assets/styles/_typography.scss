@@ -7,13 +7,15 @@ body{
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 1px;
+    color: var(--color-black);
 
     // default color
     --color-black: #333333;
     --color-white: #FFFFFF;
-    --color-gray: #666666;
+    --color-grey: #666666;
     // customize color
     --color-main: #177338;
+    --color-background: linear-gradient(87deg, #177338 -17.96%, #4CA164 95.81%);
 }
 
 /*  ===== 整站標題設定 ===== */
@@ -67,6 +69,11 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: 28.8px;
+
+    @include media-down(lg){
+        @include fz(20);
+        line-height: 24.8px;
+    }
 
     &.center{
         text-align: center
