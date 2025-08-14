@@ -152,7 +152,7 @@ export default {
           width: 0;
           height: 3px;
           background: var(--color-main);
-          transition: all 0.5s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
 
         &:hover::after {
@@ -174,6 +174,24 @@ export default {
       @include media-down(lg) {
         gap: 15px;
       }
+
+      @include media-down(md) {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+
+        .btn-main {
+          @include d-flex(center, center);
+          width: 90%;
+          height: 100%;
+          margin: auto;
+          // border-radius: 0;
+          padding: 0;
+        }
+      }
     }
 
     // 漢堡選單
@@ -187,14 +205,8 @@ export default {
         width: 20px;
         height: 20px;
         margin-left: 10px;
-        // background: var(--color-main);
-        // border-radius: 100%;
         cursor: pointer;
         top: 0rem;
-
-        // @include media-down(sm) {
-        //   top: 1rem;
-        // }
 
         > span {
           width: 20px;

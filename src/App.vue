@@ -75,16 +75,14 @@
             ai phải không?
           </h2>
           <div class="content">
-            <p
-              v-for="(item, index) in content"
-              :key="index"
-              class="list title-small-share"
-            >
+            <p v-for="(item, index) in content" :key="index" class="list">
               {{ item.list }}
             </p>
           </div>
         </div>
       </div>
+      <div class="circular-a"></div>
+      <div class="circular-b"></div>
     </div>
   </div>
 </template>
@@ -98,6 +96,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "@/assets/plugins/autoAnimation.js";
+// import "@/assets/plugins/circularAnimation.js";
 import AppHeader from "./components/AppHeader.vue";
 
 const banner = [
@@ -150,7 +149,7 @@ onMounted(async () => {
   const swiper = new Swiper(".vk-swiper", {
     modules: [Autoplay, EffectFade],
     loop: true,
-    speed: 2000,
+    speed: 1500,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -159,9 +158,53 @@ onMounted(async () => {
     fadeEffect: {
       crossFade: true,
     },
+    on: {
+      init() {
+        // 初始第一張 → 淡入
+        const activeSlide = this.slides[this.activeIndex];
+        activeSlide.querySelectorAll(".fadeUp").forEach((el) => {
+          requestAnimationFrame(() => {
+            el.classList.add("in");
+          });
+        });
+      },
+      slideChangeTransitionStart() {
+        // 舊 slide → 淡出
+        const prevSlide = this.slides[this.previousIndex];
+        prevSlide?.querySelectorAll(".fadeUp").forEach((el) => {
+          el.classList.remove("in");
+          el.classList.add("out");
+        });
+
+        // 新 slide 預先移除舊 class，準備進場
+        const activeSlide = this.slides[this.activeIndex];
+        activeSlide?.querySelectorAll(".fadeUp").forEach((el) => {
+          el.classList.remove("in", "out");
+        });
+      },
+      slideChangeTransitionEnd() {
+        // 新 slide → 淡入
+        const activeSlide = this.slides[this.activeIndex];
+        activeSlide?.querySelectorAll(".fadeUp").forEach((el) => {
+          void el.offsetWidth; // 強制重繪
+          el.classList.add("in");
+        });
+      },
+    },
+  });
+
+  const circle = document.querySelector('.circular-a');
+    window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    circle.style.top = 280 - scrollY * 0.3 + 'px';
+  });
+
+  const circleB = document.querySelector('.circular-b');
+    window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    circleB.style.bottom = 170 - scrollY * 0.3 + 'px';
   });
 });
-
 </script>
 
 <style lang="scss">
@@ -308,7 +351,8 @@ onMounted(async () => {
     width: 100%;
     height: 100%;
     padding: 100px 0;
-    
+    position: relative;
+    overflow: hidden;
 
     @include media-down(lg) {
       padding: 80px 0;
@@ -345,14 +389,59 @@ onMounted(async () => {
       .content {
         padding-top: 40px;
 
+        @include media-down(sm) {
+          padding-top: 25px;
+        }
+
         .list {
           font-weight: 400;
+          font-size: 18px;
           color: var(--color-grey);
         }
 
         .list + .list {
-          padding-top: 18px;
+          padding-top: 15px;
         }
+      }
+    }
+
+    .circular-a {
+      width: 320px;
+      height: 320px;
+      transform: translateX(-50%) rotate(25.385deg);
+      z-index: -1;
+      left: 20%;
+
+      @include media-down(jumbo) {
+        width: 260px;
+        height: 260px;
+        // left: 10%;
+      }
+
+      @include media-down(xxl) {
+        left: 10%;
+      }
+    }
+
+    .circular-b {
+      width: 200px;
+      height: 200px;
+      transform: translateX(-50%) rotate(-89.132deg);
+      z-index: 2;
+      right: 10%;
+
+      @include media-down(jumbo) {
+        width: 160px;
+        height: 160px;
+        right: 4%;
+      }
+
+      @include media-down(xxl) {
+        right: 0rem;
+      }
+
+      @include media-down(xl) {
+        right: -7rem;
       }
     }
   }

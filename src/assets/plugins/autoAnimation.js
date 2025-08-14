@@ -1,8 +1,9 @@
 /* eslint-disable */
-// autoAnimation.js
 (function () {
     const observeElement = (el) => {
     if (!el || el.classList.contains("in")) return;
+    // 排除 vk-banner 內的元素
+    if (el.closest(".vk-banner")) return;
 
     const observer = new IntersectionObserver(
         (entries, obs) => {
@@ -13,9 +14,7 @@
             }
         });
         },
-        {
-            threshold: 0.1,
-        }
+        { threshold: 0.1 }
     );
 
     observer.observe(el);
