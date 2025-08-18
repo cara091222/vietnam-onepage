@@ -3,7 +3,7 @@
     <div class="app-container">
       <div class="container-share">
         <div class="app-logo">
-          <img src="@/assets/images/logo.svg" alt="" />
+          <img src="@/assets/images/logo.png" alt="" />
         </div>
         <nav class="app-nav">
           <ul class="nav-wrap">
@@ -128,7 +128,7 @@ export default {
         top: -20px;
         right: 0;
         padding-top: 78px;
-        width: 50%;
+        width: 70%;
         height: 100vh;
         background-color: #ffffff;
         transform: translateX(100%);

@@ -12,7 +12,7 @@
             >
               <div class="container-share vk-container">
                 <div class="en-title-svg animation__el fadeUp">
-                  <img src="@/assets/images/en-title.svg" alt="" />
+                  <img src="@/assets/images/en_title.png" alt="" />
                 </div>
                 <h1 class="title animation__el fadeUp delay__750">
                   {{ item.title }}
@@ -71,8 +71,7 @@
       <div class="container-share">
         <div class="home-intro-wrap">
           <h2 class="title-main-share">
-            Bạn có gặp đủ chuyện lớn nhỏ khi sống ở Đài Loan mà chẳng biết hỏi
-            ai phải không?
+            Bạn gặp vấn đề gì tại Đài Loan mà chẳng biết hỏi ai ?
           </h2>
           <div class="content">
             <p v-for="(item, index) in content" :key="index" class="list">
@@ -81,9 +80,14 @@
           </div>
         </div>
       </div>
-      <div class="circular-a"></div>
-      <div class="circular-b"></div>
+      <div class="circular-a">
+        <div class="circular"></div>
+      </div>
+      <div class="circular-b">
+        <div class="circular"></div>
+      </div>
     </div>
+    <HomeAbout />
   </div>
 </template>
 
@@ -96,15 +100,18 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "@/assets/plugins/autoAnimation.js";
-// import "@/assets/plugins/circularAnimation.js";
+import "@/assets/plugins/parallax.js"; 
+
+// components
 import AppHeader from "./components/AppHeader.vue";
+import HomeAbout from "./components/HomeAbout.vue";
 
 const banner = [
   {
     src: new URL("@/assets/images/kv_banner.jpg", import.meta.url).href,
     alt: "Banner1",
-    title: "cho người Việt Nam đang sinh sống tại Đài Loan",
-    subtitle: "Khởi đầu hành trình bảo vệ tài chính",
+    title: "Nền tảng riêng dành cho người Việt Tại Đài Loan ",
+    subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
@@ -124,22 +131,22 @@ const banner = [
 
 const content = [
   {
-    list: "Không biết xử lý thế nào những vấn đề trong cuộc sống ?",
+    list: "Không biết xử lý thế nào những vấn đề trong cuộc sống?",
   },
   {
-    list: "Đi đâu cũng gặp bất đồng về ngôn ngữ, sợ không hiểu sẽ dễ bị lừa?",
+    list: "Bất đồng về ngôn ngữ, lo sợ không hiểu sẽ dễ bị lừa?",
   },
   {
-    list: "Muốn gửi tiền về nhà, nhưng không biết chuyển tiền như nào?",
+    list: "Muốn gửi tiền về, nhưng không biết cách chuyển?",
   },
   {
-    list: "Không biết làm thế nào để kê khai và nộp thuế, không đóng thuế kịp thời sẽ bị phạt tiền?",
+    list: "Cách kê khai và nộp thuế, sợ bị phạt nếu đóng thuế chậm?",
   },
   {
-    list: "Thiếu cảm giác tin tưởng, không biết thông tin nào là chính xác?",
+    list: "TThiếu niềm tin, không biết thông tin nào là chính xác?",
   },
   {
-    list: "Không hiểu biết rõ về pháp luật, khi gặp phải vấn đề không biết làm sao để bảo vệ quyền lợi của bản thân?",
+    list: "Không nắm rõ pháp luật, gặp vấn đề không biết cách bảo vệ quyền lợi của bản thân?",
   },
 ];
 
@@ -193,17 +200,6 @@ onMounted(async () => {
     },
   });
 
-  const circle = document.querySelector('.circular-a');
-    window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    circle.style.top = 280 - scrollY * 0.3 + 'px';
-  });
-
-  const circleB = document.querySelector('.circular-b');
-    window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    circleB.style.bottom = 170 - scrollY * 0.3 + 'px';
-  });
 });
 </script>
 
@@ -213,6 +209,7 @@ onMounted(async () => {
 .home-page {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   .vk {
     position: relative;
@@ -350,16 +347,15 @@ onMounted(async () => {
   .home-intro {
     width: 100%;
     height: 100%;
-    padding: 100px 0;
+    padding: 100px 0 20px 0;
     position: relative;
-    overflow: hidden;
 
     @include media-down(lg) {
-      padding: 80px 0;
+      padding: 80px 0 10px 0;
     }
 
     @include media-down(sm) {
-      padding: 50px 0;
+      padding: 50px 0 10px 0;
     }
 
     .container-share {
@@ -408,27 +404,37 @@ onMounted(async () => {
     .circular-a {
       width: 320px;
       height: 320px;
-      transform: translateX(-50%) rotate(25.385deg);
       z-index: -1;
       left: 20%;
+      top: 100px;
+      transform: translateY(-100); 
 
       @include media-down(jumbo) {
         width: 260px;
         height: 260px;
-        // left: 10%;
       }
 
       @include media-down(xxl) {
         left: 10%;
+        top: 0;
+      }
+
+      @include media-down(sm) {
+        width: 200px;
+        height: 220px;
       }
     }
 
     .circular-b {
       width: 200px;
       height: 200px;
-      transform: translateX(-50%) rotate(-89.132deg);
       z-index: 2;
       right: 10%;
+      bottom: 30px;
+
+      .circular {
+        transform: translateX(-50%) rotate(-89.132deg);
+      }
 
       @include media-down(jumbo) {
         width: 160px;
@@ -442,6 +448,8 @@ onMounted(async () => {
 
       @include media-down(xl) {
         right: -7rem;
+        bottom: 0;
+        z-index: -1;
       }
     }
   }

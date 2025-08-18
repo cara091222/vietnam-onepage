@@ -5,7 +5,8 @@ $breakpoint_st: 1920px;
 $breakpoint_jumbo: 1600px;
 $breakpoint_xxl: 1440px;
 $breakpoint_xl: 1280px;
-$breakpoint_lg: 992px;
+$breakpoint_lg: 1025px;
+$breakpoint_l: 992px;
 $breakpoint_md: 768px;
 $breakpoint_sm: 576px;
 $breakpoint_xs: 414px;
@@ -17,6 +18,7 @@ $breakpoints: (
     'jumbo': $breakpoint_jumbo,
     'xxl': $breakpoint_xxl,
     'xl': $breakpoint_xl,
+    'l': $breakpoint_l,
     'lg': $breakpoint_lg,
     'md': $breakpoint_md,
     'sm': $breakpoint_sm,

@@ -206,7 +206,10 @@
 
 // 浮動背景
 .circular-a , .circular-b {
-  position: absolute;
+    position: absolute;
+    will-change: transform;
+}
+.circular {
   border-radius: 100rem;
   filter: blur(11.5px);
   flex-shrink: 0;
@@ -214,5 +217,6 @@
   background: linear-gradient(180deg, rgba(222, 239, 219, 0.40) 19.23%, rgba(76, 161, 100, 0.40) 100%);
   pointer-events: none; /* 不擋點擊事件 */
   transition: transform 0.2s ease; /* 可選，增加平滑感 */
+  transform: translateX(-50%) rotate(25.385deg);
 }
 
