@@ -202,8 +202,8 @@ export default {
         display: block;
         transition: all 0.5s ease-in-out;
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         margin-left: 10px;
         cursor: pointer;
         top: 0rem;
