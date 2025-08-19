@@ -42,14 +42,13 @@
           </li>
         </ul>
         <div class="circle-bg">
-          <img src="@/assets/images/circle_bg.png" alt="">
+          <img src="@/assets/images/circle_bg.png" alt="" />
         </div>
       </div>
       <!-- content -->
       <div class="content-wrap">
         <transition name="fade-up" mode="out-in">
           <div :key="activeTab" class="content-item">
-            <!-- Tab 1 -->
             <template v-if="activeTab === 'tab1'">
               <h3 class="title-en">About</h3>
               <h2 class="title-main-share">
@@ -57,8 +56,6 @@
               </h2>
               <p class="desc"></p>
             </template>
-
-            <!-- Tab 2 ~ 4 用 v-for -->
             <template v-else>
               <div
                 v-for="tab in tabs.filter((t) => t.id === activeTab)"
@@ -101,19 +98,19 @@
             y="0"
             fill="rgba(219, 239, 230, 0.5)"
           />
-          <!-- <use
-              xlink:href="#gentle-wave"
-              x="48"
-              y="3"
-              fill="rgba(255,255,255,0.5)"
-            /> -->
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(219, 239, 230, 0.7)"
+          />
           <use
             xlink:href="#gentle-wave"
             x="48"
             y="5"
-            fill="rgba(53, 147, 57, 0.15)"
+            fill="rgba(53, 147, 57, 0.1)"
           />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#DBEFE6" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
         </g>
       </svg>
     </div>
@@ -222,10 +219,15 @@ export default {
     .circle-bg {
       @include poa-center;
       z-index: -3;
-      top: 45%; 
-      // left: 56%;
+      top: 45%;
       width: 100%;
       height: 100%;
+
+      @include media-down(sm) {
+        transform: rotateZ(25deg);
+        top: 0;
+        left: 0;
+      }
 
       img {
         width: 100%;
@@ -270,6 +272,12 @@ export default {
       background-color: var(--color-white);
       border-radius: 100rem;
       box-shadow: 0 0 31px 0 rgba(23, 115, 56, 0.2);
+      transition: all 0.3s ease-in-out;
+
+      &.active,
+      &:hover {
+        box-shadow: 0 0 31px 0 rgba(95, 176, 118, 0.7);
+      }
 
       @include media-down(jumbo) {
         width: 220px;
@@ -354,17 +362,18 @@ export default {
         }
 
         @include media-down(xl) {
-          width: 133px;
-          height: 172px;
-          font-size: 22px;
-          line-height: 24px;
+          width: 143px;
+          height: 182px;
+          font-size: 20px;
+          line-height: 22px;
         }
+
         @include media-down(l) {
           width: 113px;
           height: 152px;
           font-size: 18px;
-          line-height: 22px;
         }
+
         @include media-down(sm) {
           width: 113px;
           height: 122px;
@@ -422,7 +431,7 @@ export default {
 
       @include media-down(xs) {
         margin-right: 0rem;
-        top: 3rem;
+        top: 4rem;
       }
     }
 
@@ -443,17 +452,17 @@ export default {
 
       @include media-down(lg) {
         margin-right: 18rem;
-        bottom: -6rem;
+        bottom: -5rem;
       }
 
       @include media-down(l) {
-        margin-right: 12rem;
+        margin-right: 14rem;
         bottom: -6.5rem;
       }
 
       @include media-down(sm) {
         margin-right: 5rem;
-        bottom: -6rem;
+        bottom: -5.8rem;
       }
     }
 
@@ -488,7 +497,7 @@ export default {
 
       @include media-down(xs) {
         margin-left: -1rem;
-        top: 11rem;
+        top: 10rem;
       }
     }
   }

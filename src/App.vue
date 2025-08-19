@@ -88,6 +88,7 @@
       </div>
     </div>
     <HomeAbout />
+    <HomeInfo />
   </div>
 </template>
 
@@ -105,6 +106,7 @@ import "@/assets/plugins/parallax.js";
 // components
 import AppHeader from "./components/AppHeader.vue";
 import HomeAbout from "./components/HomeAbout.vue";
+import HomeInfo from "./components/HomeInfo.vue";
 
 const banner = [
   {
