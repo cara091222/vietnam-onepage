@@ -3,32 +3,31 @@
     <div class="container-share">
       <h3 class="title-en">information</h3>
       <h2 class="title-main-share">Thông tin về cuộc sống tài chính</h2>
-      <div class="home-info-wrap">
-        <transition-group name="expand" tag="div" class="home-info-wrap">
-          <div
-            class="item"
-            v-for="(info, index) in infos"
-            :key="index"
-            :class="{ active: activeIndex === index }"
-            @click="toggleActive(index)"
-          >
-            <div class="content">
-              <h4 class="title-medium-share">{{ info.title }}</h4>
-              <p class="desc">{{ info.desc }}</p>
-            </div>
-            <div class="img-bg">
-              <img :src="info.img" alt="" />
-            </div>
+      <transition-group name="expand" tag="div" class="home-info-wrap">
+        <div
+          class="item"
+          v-for="(info, index) in infos"
+          :key="index"
+          :class="{ active: isMobile || activeIndex === index }"
+          @click="toggleActive(index)"
+        >
+          <div class="content">
+            <h4 class="title-medium-share">{{ info.title }}</h4>
+            <p class="desc">{{ info.desc }}</p>
+            <div class="green-bg"></div>
           </div>
-        </transition-group>
-      </div>
+          <div class="img-bg">
+            <img :src="info.img" alt="" />
+          </div>
+        </div>
+      </transition-group>
     </div>
   </div>
 </template>
 
 <script setup>
 /* eslint-disable */
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const infos = ref([
   {
@@ -41,17 +40,53 @@ const infos = ref([
     desc: "(Trang dịch vụ khai và nộp thuế – Bộ Tài chính)",
     img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
   },
+  {
+    title: "Học tập ngôn ngữ",
+    desc: "(Theo quy định của chính quyền địa phương từng khu vực)",
+    img: new URL("@/assets/images/home_info_01.png", import.meta.url).href,
+  },
+  {
+    title: "Thông tin việc làm",
+    desc: "(Trang phát triển bồi dưỡng năng lực Tân di dân)",
+    img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
+  },
+  {
+    title: "Thông tin cư trú",
+    desc: "(Sở Di dân - Bộ Nội Chính)",
+    img: new URL("@/assets/images/home_info_01.png", import.meta.url).href,
+  },
+  {
+    title: "Dịch vụ bảo hiểm",
+    desc: "(Đội ngũ chuyên viên tư vấn Việt Nam tại Cathay Life)",
+    img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
+  },
 ]);
 
-const activeIndex = ref(0); // 預設展開第一個
+const activeIndex = ref(0);
+const isMobile = ref(window.innerWidth < 768);
 
 const toggleActive = (index) => {
-  if (activeIndex.value !== index) {
+  if (!isMobile.value) {
     activeIndex.value = index;
   }
 };
+
+// 監聽螢幕大小變化
+const handleResize = () => {
+  isMobile.value = window.innerWidth < 768;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", handleResize);
+});
 </script>
 <style lang="scss">
+@import "@/assets/styles/main.scss";
+
 .home-info {
   .container-share {
     @include d-flex(center, center, column);
@@ -68,6 +103,27 @@ const toggleActive = (index) => {
     width: 100%;
     height: 500px;
 
+    @include media-down(lg) {
+      height: 400px;
+      margin-top: 40px;
+    }
+
+    @include media-down(l) {
+      height: 280px;
+      gap: 10px;
+    }
+
+    @include media-down(md) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media-down(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .item {
       position: relative;
       overflow: hidden;
@@ -80,6 +136,22 @@ const toggleActive = (index) => {
         width: 765px;
         height: 100%;
         border-radius: 60px;
+
+        @include media-down(l) {
+          border-radius: 40px;
+          width: 565px;
+        }
+
+        @include media-down(md) {
+          width: 100%;
+          height: 250px;
+          border-radius: 35px;
+        }
+
+        @include media-down(sm) {
+          height: 200px;
+          border: 20px;
+        }
       }
 
       .img-bg {
@@ -99,6 +171,10 @@ const toggleActive = (index) => {
             rgba(0, 0, 0, 0) 52.8%,
             rgba(0, 0, 0, 0.8) 100%
           );
+
+          @include media-down(sm) {
+            background: #00000064;
+          }
         }
 
         img {
@@ -115,20 +191,16 @@ const toggleActive = (index) => {
         height: 90%;
         width: 100%;
         color: var(--color-white);
-        bottom: 3rem;
-        padding: 40px 0 20px 0;
+        bottom: 0;
+        padding: 70px 0;
         transition: all 0.5s ease-in-out;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 120px;
-          bottom: 0;
-          background: linear-gradient(43deg, #177338 23.95%, #4ca164 76.05%);
-          z-index: -1;
-          opacity: 1;
-          overflow: visible;
+        @include media-down(lg) {
+          height: 80%;
+        }
+
+        @include media-down(l) {
+          padding: 40px 0;
         }
 
         > h4 {
@@ -139,10 +211,27 @@ const toggleActive = (index) => {
         > p {
           display: none;
         }
+
+        .green-bg {
+          position: absolute;
+          bottom: 3rem;
+          background: linear-gradient(43deg, #177338 23.95%, #4ca164 76.05%);
+          width: 100%;
+          height: 120px;
+          z-index: -1;
+          opacity: 1;
+          overflow: visible;
+          transition: all 0.5s ease-in-out;
+
+          @include media-down(l) {
+            height: 80px;
+            bottom: 1.5rem;
+          }
+        }
       }
 
       &.active .content {
-        width: 100%;
+        width: auto;
         height: auto;
         padding: 50px;
         bottom: 0;
@@ -152,9 +241,17 @@ const toggleActive = (index) => {
         flex-direction: column;
         align-items: flex-start;
 
-        &::before {
-          opacity: 0;
-          overflow: hidden;
+        @include media-down(l) {
+          padding: 30px;
+        }
+
+        @include media-down(md) {
+          padding: 20px;
+        }
+
+        @include media-down(sm) {
+          top: 0;
+          justify-content: flex-start;
         }
 
         > h4 {
@@ -163,6 +260,11 @@ const toggleActive = (index) => {
 
         > p {
           display: block;
+        }
+
+        .green-bg {
+          opacity: 0;
+          overflow: hidden;
         }
       }
     }

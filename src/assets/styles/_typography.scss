@@ -46,7 +46,7 @@ body{
     color: var(--color-black);
 
     @include media-down(lg){
-        @include fz(24);
+        @include fz(22);
     }
 
     &.center{
@@ -98,7 +98,11 @@ body{
         letter-spacing: 3px;
     }
 
-    @include media-down(xs){
+    @include media-down(sm){
+        @include fz(50);
+    }
+
+     @include media-down(xs){
         @include fz(42);
     }
     
