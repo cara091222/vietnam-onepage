@@ -33,32 +33,32 @@ const infos = ref([
   {
     title: "Mở tài khoản ngân hàng/bưu điện",
     desc: "(Sở Di dân - Bộ Nội Chính)",
-    img: new URL("@/assets/images/home_info_01.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg01.jpg", import.meta.url).href,
   },
   {
     title: "Kê khai thuế",
     desc: "(Trang dịch vụ khai và nộp thuế – Bộ Tài chính)",
-    img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg02.jpg", import.meta.url).href,
   },
   {
     title: "Học tập ngôn ngữ",
     desc: "(Theo quy định của chính quyền địa phương từng khu vực)",
-    img: new URL("@/assets/images/home_info_01.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg03.jpg", import.meta.url).href,
   },
   {
     title: "Thông tin việc làm",
     desc: "(Trang phát triển bồi dưỡng năng lực Tân di dân)",
-    img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg04.jpg", import.meta.url).href,
   },
   {
     title: "Thông tin cư trú",
     desc: "(Sở Di dân - Bộ Nội Chính)",
-    img: new URL("@/assets/images/home_info_01.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg05.jpg", import.meta.url).href,
   },
   {
     title: "Dịch vụ bảo hiểm",
     desc: "(Đội ngũ chuyên viên tư vấn Việt Nam tại Cathay Life)",
-    img: new URL("@/assets/images/home_info_02.png", import.meta.url).href,
+    img: new URL("@/assets/images/info_bg06.jpg", import.meta.url).href,
   },
 ]);
 
@@ -118,10 +118,12 @@ onBeforeUnmount(() => {
       grid-template-columns: repeat(1, 1fr);
       width: 100%;
       height: 100%;
+      gap: 20px;
     }
 
     @include media-down(sm) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
     .item {
@@ -150,7 +152,7 @@ onBeforeUnmount(() => {
 
         @include media-down(sm) {
           height: 200px;
-          border: 20px;
+          border-radius: 25px;
         }
       }
 
@@ -252,6 +254,10 @@ onBeforeUnmount(() => {
         @include media-down(sm) {
           top: 0;
           justify-content: flex-start;
+        }
+
+        @include media-down(xs) {
+          padding: 15px;
         }
 
         > h4 {

@@ -9,7 +9,7 @@
     color: #fff;
     position: relative;
     z-index: 1;
-    transition: background 0.3s ease-in-out, color 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     /* 利用偽元素做漸層陰影 */
     &::after {

@@ -3,7 +3,7 @@
     <div class="app-container">
       <div class="container-share">
         <div class="app-logo">
-          <img src="@/assets/images/logo.png" alt="" />
+          <img src="@/assets/images/logo_en.png" alt="" />
         </div>
         <nav class="app-nav">
           <ul class="nav-wrap">
