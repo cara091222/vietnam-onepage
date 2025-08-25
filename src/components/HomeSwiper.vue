@@ -67,7 +67,10 @@
       </div>
 
       <div class="btn-wrap">
-        <a href="" class="btn-main">
+        <a
+          href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=c9a559d2-7aab-4f13-a6ed-e7e9c52aec87&redirect_uri=https%3A%2F%2Fforms.office.com%2Flanding&state=eyJ2ZXJzaW9uIjoxLCJkYXRhIjp7IklkZW50aXR5UHJvdmlkZXIiOiJBUVY4SEg1ZHBxYXdmTUcyVkpzU0V4T3pHbkNLRWdKd3pjWG44MVk5T3RNbDVRYkxuWXV6VWs5NUpGZkIzMVZzZDdjQXYyQVA5azRLcXh4LU9seFVRSVEiLCIucmVkaXJlY3QiOiJodHRwczovL2Zvcm1zLm9mZmljZS5jb20vUGFnZXMvRGVzaWduUGFnZVYyLmFzcHg_c3VicGFnZT1kZXNpZ24mdG9rZW49YmZjNTJiOWE3NmM0NDA2MWI4NGYyNWRjMmZjNzdkMGMmaWQ9MVMwOG1oT2c4MEstdWU2VmJsSWlfUlhkY011bklZZERrZm8tNnNpN1BxSlVOMGMxTkVsWU16RlpTbGhITnpCS1UxUXhNRVpCT0ZWT1NDNHUiLCIueHNyZiI6IkFRY29kdHRmalZEVS10NVBsY2dZY1JucHM4a1NLWG03cUlSOFJaU01acHk4MjB6M09UMEsxc3F1WTJZTUF4SEZDTl9lLVBPWUJ5WklWXzl4ZnFLSGJRY0pyTFh5SjlsbDMwOGx0c1NBRmkwZmhKTVdKM21ZaDdBWTNubUF4MU9hLVEiLCJPcGVuSWRDb25uZWN0LkNvZGUuUmVkaXJlY3RVcmkiOiJBY2hKLXRPNFEwdk5Od3pCM3ZtbzhXZUctQUJCU1Ruc2FJZVBHaEpQVXlrQ0UyQmI0V0h1NEVrSy1MYVRVSS1hUlc3clNrNlJhUTFVZFpfMUxCTXVhQTR3WDl2X296eWs2ajYxVXNhS1J1M3VhQ1NxbGlGbHhkWHFzNU51U0tIZmZBIn19&response_type=code&scope=openid%20profile&response_mode=form_post&nonce=638917102964437588.MTFiY2NiYTQtNGMwZi00OTYxLTlmNWItYjZlNmE3NTc3MDI2N2RkZGVhNGYtNDFhNS00MDY3LWJmNTItMzIwM2YzN2RkNWQ0&msafed=0&x-client-SKU=ID_NET9_0&x-client-ver=8.9.0.0"
+          class="btn-main"
+        >
           <div class="btn">Hẹn lịch tư vấn</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +97,49 @@
           </svg>
         </a>
       </div>
+    </div>
+    <!--Waves start-->
+    <div class="waves-wrapper">
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="0"
+            fill="rgba(219, 239, 230, 0.5)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(219, 239, 230, 0.7)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="5"
+            fill="rgba(53, 147, 57, 0.1)"
+          />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+    <div class="circular-a">
+      <div class="circular"></div>
     </div>
   </div>
 </template>
@@ -189,15 +235,17 @@ onMounted(async () => {
 
 .home-consultant {
   background: #fafafa;
+  position: relative;
+
   &-container {
     padding: 120px 0 150px 0;
 
     @include media-down(lg) {
-      padding: 80px 0;
+      padding: 80px 0 120px 0;
     }
 
     @include media-down(sm) {
-      padding: 50px 0;
+      padding: 50px 0 90px 0;
     }
   }
 
@@ -212,6 +260,7 @@ onMounted(async () => {
   }
 
   .consultant-swiper-wrap {
+    z-index: 3;
     height: 100%;
     padding: 80px 100px 0 100px;
     position: relative;
@@ -327,7 +376,7 @@ onMounted(async () => {
 
     .swiper-button-prev,
     .swiper-button-next {
-      position: absolute; 
+      position: absolute;
       top: 38%; // 置中
       transform: translateY(-50%);
       z-index: 10;
@@ -351,17 +400,19 @@ onMounted(async () => {
     }
 
     .swiper-button-prev {
-      left: 20px; 
+      left: 20px;
     }
     .swiper-button-next {
-      right: 20px; 
+      right: 20px;
     }
   }
 
   .btn-wrap {
+    position: relative;
     @include d-flex(center, center);
     max-width: auto;
     transition: all 0.5s ease;
+    z-index: 3;
 
     .btn-main {
       @include d-flex(center, center);
@@ -372,6 +423,43 @@ onMounted(async () => {
       &:hover {
         color: var(--color-main);
       }
+    }
+  }
+
+  /* Waves */
+  .waves-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .circular-a {
+    width: 280px;
+    height: 280px;
+    z-index: 1;
+    left: -1rem;
+    top: -700px;
+    transform: translateY(-100);
+
+    @include media-down(jumbo) {
+      width: 220px;
+      height: 220px;
+    }
+
+    @include media-down(xxl) {
+      top: -500px;
+    }
+
+    @include media-down(l) {
+      width: 180px;
+      height: 180px;
+      left: -0.5rem;
+    }
+
+    @include media-down(sm) {
+      // width: 200px;
+      // height: 220px;
     }
   }
 }

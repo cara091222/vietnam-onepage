@@ -21,7 +21,11 @@
             </li>
           </ul>
           <div class="contact-btn">
-            <a href="" class="btn-main">Liên hệ</a>
+            <a
+              href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=c9a559d2-7aab-4f13-a6ed-e7e9c52aec87&redirect_uri=https%3A%2F%2Fforms.office.com%2Flanding&state=eyJ2ZXJzaW9uIjoxLCJkYXRhIjp7IklkZW50aXR5UHJvdmlkZXIiOiJBUVY4SEg1ZHBxYXdmTUcyVkpzU0V4T3pHbkNLRWdKd3pjWG44MVk5T3RNbDVRYkxuWXV6VWs5NUpGZkIzMVZzZDdjQXYyQVA5azRLcXh4LU9seFVRSVEiLCIucmVkaXJlY3QiOiJodHRwczovL2Zvcm1zLm9mZmljZS5jb20vUGFnZXMvRGVzaWduUGFnZVYyLmFzcHg_c3VicGFnZT1kZXNpZ24mdG9rZW49YmZjNTJiOWE3NmM0NDA2MWI4NGYyNWRjMmZjNzdkMGMmaWQ9MVMwOG1oT2c4MEstdWU2VmJsSWlfUlhkY011bklZZERrZm8tNnNpN1BxSlVOMGMxTkVsWU16RlpTbGhITnpCS1UxUXhNRVpCT0ZWT1NDNHUiLCIueHNyZiI6IkFRY29kdHRmalZEVS10NVBsY2dZY1JucHM4a1NLWG03cUlSOFJaU01acHk4MjB6M09UMEsxc3F1WTJZTUF4SEZDTl9lLVBPWUJ5WklWXzl4ZnFLSGJRY0pyTFh5SjlsbDMwOGx0c1NBRmkwZmhKTVdKM21ZaDdBWTNubUF4MU9hLVEiLCJPcGVuSWRDb25uZWN0LkNvZGUuUmVkaXJlY3RVcmkiOiJBY2hKLXRPNFEwdk5Od3pCM3ZtbzhXZUctQUJCU1Ruc2FJZVBHaEpQVXlrQ0UyQmI0V0h1NEVrSy1MYVRVSS1hUlc3clNrNlJhUTFVZFpfMUxCTXVhQTR3WDl2X296eWs2ajYxVXNhS1J1M3VhQ1NxbGlGbHhkWHFzNU51U0tIZmZBIn19&response_type=code&scope=openid%20profile&response_mode=form_post&nonce=638917102964437588.MTFiY2NiYTQtNGMwZi00OTYxLTlmNWItYjZlNmE3NTc3MDI2N2RkZGVhNGYtNDFhNS00MDY3LWJmNTItMzIwM2YzN2RkNWQ0&msafed=0&x-client-SKU=ID_NET9_0&x-client-ver=8.9.0.0"
+              class="btn-main"
+              >Liên hệ</a
+            >
           </div>
           <div class="nav-hamburger">
             <span></span>
@@ -59,7 +63,6 @@ export default {
       e.preventDefault(); // 阻止 <a href="#"> 的預設跳轉行為
       jQuery("html, body").animate({ scrollTop: 0 }, 600);
     });
-
   },
 };
 </script>
@@ -169,7 +172,6 @@ export default {
     .contact-btn {
       margin-left: 25px;
       box-sizing: border-box;
-
 
       @include media-down(lg) {
         gap: 15px;
