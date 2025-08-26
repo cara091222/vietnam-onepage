@@ -8,16 +8,16 @@
         <nav class="app-nav">
           <ul class="nav-wrap">
             <li class="main-item">
-              <a class="main-link" data-hash="#HomeAbout">về chúng tôi</a>
+              <a class="main-link" href="#HomeAbout">về chúng tôi</a>
             </li>
             <li class="main-item">
-              <a class="main-link" data-hash="#HomeInfo">Dịch vụ</a>
+              <a class="main-link" href="#HomeInfo">Dịch vụ</a>
             </li>
             <li class="main-item">
-              <a class="main-link" data-hash="#HomeSwiper">tư vấn</a>
+              <a class="main-link" href="#HomeSwiper">tư vấn</a>
             </li>
             <li class="main-item">
-              <a class="main-link" data-hash="#">đặt vấn đề</a>
+              <a class="main-link" href="#HomeFAQ">đặt vấn đề</a>
             </li>
           </ul>
           <div class="contact-btn">
@@ -64,22 +64,12 @@ export default {
       jQuery("html, body").animate({ scrollTop: 0 }, 600);
     });
 
-    // JS：根據當前是否在首頁動態設定 href
-    jQuery(document).ready(function () {
-      const isHome = window.location.pathname === "/";
-
-      jQuery(".main-link").each(function () {
-        const hash = jQuery(this).data("hash");
-        const href = isHome ? hash : "/" + hash;
-        jQuery(this).attr("href", href);
-      });
-
-      // 點擊滑動效果（同前）
+    // 單頁錨點
+    if (window.location.pathname === "/") {
       jQuery(".main-link[href^='#']").on("click", function (e) {
-        const href = jQuery(this).attr("href");
-        const target = jQuery(href);
+        const target = jQuery(this.getAttribute("href"));
         if (target.length) {
-          e.preventDefault();
+          e.preventDefault(); 
           jQuery("html, body").animate(
             { scrollTop: target.offset().top },
             800,
@@ -87,19 +77,7 @@ export default {
           );
         }
       });
-
-      // 頁面載入時若有 hash，也滑動
-      const hash = window.location.hash;
-      if (hash && jQuery(hash).length) {
-        setTimeout(() => {
-          jQuery("html, body").animate(
-            { scrollTop: jQuery(hash).offset().top },
-            800,
-            "swing"
-          );
-        }, 200);
-      }
-    });
+    }
   },
 };
 </script>

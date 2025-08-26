@@ -68,7 +68,7 @@ body{
     @include ls(2,22);
     font-style: normal;
     font-weight: 700;
-    line-height: 28.8px;
+    line-height: 28px;
 
     @include media-down(lg){
         @include fz(20);

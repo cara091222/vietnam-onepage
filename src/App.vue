@@ -91,6 +91,7 @@
     <HomeAbout />
     <HomeInfo />
     <HomeSwiper />
+    <HomeFAQ />
   </div>
 </template>
 
@@ -110,25 +111,26 @@ import AppHeader from "./components/AppHeader.vue";
 import HomeAbout from "./components/HomeAbout.vue";
 import HomeInfo from "./components/HomeInfo.vue";
 import HomeSwiper from "./components/HomeSwiper.vue";
+import HomeFAQ from "./components/HomeFAQ.vue";
 
 const banner = [
   {
     src: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/banner400x750.jpg", import.meta.url).href,
+    // mobile: new URL("@/assets/images/banner400x750.jpg", import.meta.url).href,
     alt: "Banner1",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+    // mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+    // mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
