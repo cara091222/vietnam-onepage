@@ -1,5 +1,5 @@
 <template>
-  <div class="home-about padding-share">
+  <div class="home-about padding-share" id="HomeAbout">
     <div class="home-about-container">
       <!-- tab -->
       <div class="tab-wrap">
@@ -31,7 +31,7 @@
                 r="50"
                 stroke="#666666"
                 stroke-width="0.3"
-                stroke-dasharray="5 5"
+                stroke-dasharray="2 2"
                 fill="none"
               />
               <circle cx="55" cy="55" r="49" fill="none" />
@@ -338,11 +338,11 @@ export default {
 
       .round {
         transform-origin: 50% 50%;
-        animation: rotate-border 8s linear infinite;
+        animation: rotate-border 20s linear infinite;
       }
 
       .tab-link {
-        position: relative; /* 讓文字顯示在 SVG 之上 */
+        position: relative; 
         z-index: 1;
         width: 193px;
         height: 232px;

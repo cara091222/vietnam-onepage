@@ -1,5 +1,5 @@
 <template>
-  <div class="home-info padding-share">
+  <div class="home-info padding-share" id="HomeInfo">
     <div class="container-share">
       <h3 class="title-en">information</h3>
       <h2 class="title-main-share">Thông tin về cuộc sống tài chính</h2>

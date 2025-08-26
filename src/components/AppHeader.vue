@@ -8,13 +8,13 @@
         <nav class="app-nav">
           <ul class="nav-wrap">
             <li class="main-item">
-              <a class="main-link" data-hash="#">về chúng tôi</a>
+              <a class="main-link" data-hash="#HomeAbout">về chúng tôi</a>
             </li>
             <li class="main-item">
-              <a class="main-link" data-hash="#">Dịch vụ</a>
+              <a class="main-link" data-hash="#HomeInfo">Dịch vụ</a>
             </li>
             <li class="main-item">
-              <a class="main-link" data-hash="#">tư vấn</a>
+              <a class="main-link" data-hash="#HomeSwiper">tư vấn</a>
             </li>
             <li class="main-item">
               <a class="main-link" data-hash="#">đặt vấn đề</a>
@@ -62,6 +62,43 @@ export default {
     jQuery(".page-top").on("click", function (e) {
       e.preventDefault(); // 阻止 <a href="#"> 的預設跳轉行為
       jQuery("html, body").animate({ scrollTop: 0 }, 600);
+    });
+
+    // JS：根據當前是否在首頁動態設定 href
+    jQuery(document).ready(function () {
+      const isHome = window.location.pathname === "/";
+
+      jQuery(".main-link").each(function () {
+        const hash = jQuery(this).data("hash");
+        const href = isHome ? hash : "/" + hash;
+        jQuery(this).attr("href", href);
+      });
+
+      // 點擊滑動效果（同前）
+      jQuery(".main-link[href^='#']").on("click", function (e) {
+        const href = jQuery(this).attr("href");
+        const target = jQuery(href);
+        if (target.length) {
+          e.preventDefault();
+          jQuery("html, body").animate(
+            { scrollTop: target.offset().top },
+            800,
+            "swing"
+          );
+        }
+      });
+
+      // 頁面載入時若有 hash，也滑動
+      const hash = window.location.hash;
+      if (hash && jQuery(hash).length) {
+        setTimeout(() => {
+          jQuery("html, body").animate(
+            { scrollTop: jQuery(hash).offset().top },
+            800,
+            "swing"
+          );
+        }, 200);
+      }
     });
   },
 };
