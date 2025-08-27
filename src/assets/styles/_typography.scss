@@ -7,7 +7,7 @@ body{
     font-weight: 400;
     line-height: 22px; /* 150% */
     letter-spacing: 1px;
-    color: var(--color-black);
+    color: var(--color-grey);
 
     // default color
     --color-black: #333333;
@@ -27,6 +27,7 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    color: var(--color-black);
 
     @include media-down(lg){
         @include fz(28);
@@ -69,6 +70,7 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
+    color: var(--color-black);
 
     @include media-down(lg){
         @include fz(20);

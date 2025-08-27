@@ -14,8 +14,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="這裡寫網站簡短描述，會出現在搜尋引擎結果。">
+    <meta name="author" content="你的名字或公司名稱">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="og:description" content="這裡寫社群分享時的簡短描述">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://你的網域.com">
+    <meta property="og:image" content="https://你的網域.com/分享縮圖.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
   </head>
   <body>
     <noscript>

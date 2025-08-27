@@ -1,16 +1,16 @@
 <template>
   <div class="home-page">
     <AppHeader />
-    <div class="vk">
-      <div class="vk-banner">
-        <div class="swiper vk-swiper">
-          <div class="swiper-wrapper vk-swiper-wrapper">
+    <div class="kv">
+      <div class="kv-banner">
+        <div class="swiper kv-swiper">
+          <div class="swiper-wrapper kv-swiper-wrapper">
             <div
               v-for="(item, index) in banner"
               :key="index"
-              class="swiper-slide vk-swiper-slide"
+              class="swiper-slide kv-swiper-slide"
             >
-              <div class="container-share vk-container">
+              <div class="container-share kv-container">
                 <div class="en-title-svg animation__el fadeUp">
                   <img src="@/assets/images/en_title.png" alt="" />
                 </div>
@@ -93,6 +93,27 @@
     <HomeSwiper />
     <HomeFAQ />
     <HomeEvent />
+    <div class="copyright">© Cathay Life Insurance. All rights reserved.</div>
+    <a href="#" class="page-top">
+      <div class="img">
+        <img src="@/assets/images/go_top.svg" alt="" />
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        class="arrow"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M11 19.3599C10.595 19.3599 10.2666 19.039 10.2666 18.6433L10.2666 5.08643L5.6518 9.59567C5.36541 9.87551 4.90116 9.87551 4.61477 9.59567C4.32838 9.31582 4.32838 8.86219 4.61477 8.58234L10.4814 2.84977C10.6189 2.71534 10.8055 2.63986 11 2.63986C11.1944 2.63986 11.381 2.71534 11.5185 2.84977L17.3852 8.58234C17.6716 8.86219 17.6716 9.31582 17.3852 9.59567C17.0988 9.87551 16.6345 9.87551 16.3481 9.59567L11.7333 5.08643L11.7333 18.6433C11.7333 19.039 11.405 19.3599 11 19.3599Z"
+          fill="#333333"
+        />
+      </svg>
+    </a>
   </div>
 </template>
 
@@ -105,7 +126,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "@/assets/plugins/autoAnimation.js";
-import "@/assets/plugins/parallax.js"; 
+import "@/assets/plugins/parallax.js";
 
 // components
 import AppHeader from "./components/AppHeader.vue";
@@ -114,7 +135,6 @@ import HomeInfo from "./components/HomeInfo.vue";
 import HomeSwiper from "./components/HomeSwiper.vue";
 import HomeFAQ from "./components/HomeFAQ.vue";
 import HomeEvent from "./components/HomeEvent.vue";
-
 
 const banner = [
   {
@@ -126,14 +146,16 @@ const banner = [
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url)
+      .href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url)
+      .href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
@@ -164,7 +186,7 @@ const content = [
 onMounted(async () => {
   await nextTick();
 
-  const swiper = new Swiper(".vk-swiper", {
+  const swiper = new Swiper(".kv-swiper", {
     modules: [Autoplay, EffectFade],
     loop: true,
     speed: 1500,
@@ -211,6 +233,20 @@ onMounted(async () => {
     },
   });
 
+  // 點擊回頂端
+  jQuery(".page-top").on("click", function (e) {
+    e.preventDefault();
+    jQuery("html, body").animate({ scrollTop: 0 }, 600);
+  });
+
+  // **監聽卷軸，超過 500px 顯示 page-top**
+  jQuery(window).on("scroll", function () {
+    if (jQuery(this).scrollTop() > 300) {
+      jQuery(".page-top").fadeIn(300); // 淡入
+    } else {
+      jQuery(".page-top").fadeOut(300); // 淡出
+    }
+  });
 });
 </script>
 
@@ -221,8 +257,9 @@ onMounted(async () => {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 
-  .vk {
+  .kv {
     position: relative;
     width: 100%;
     height: 750px;
@@ -232,22 +269,22 @@ onMounted(async () => {
       height: 600px;
     }
 
-    .vk-banner {
+    .kv-banner {
       z-index: 2;
       width: 100%;
       height: 100%;
       position: relative;
       overflow: hidden;
 
-      .vk-swiper {
+      .kv-swiper {
         width: 100%;
         height: 100%;
 
-        .vk-swiper-wrapper {
+        .kv-swiper-wrapper {
           width: 100%;
           height: 100%;
 
-          .vk-swiper-slide {
+          .kv-swiper-slide {
             width: 100%;
             height: 100%;
             overflow: hidden;
@@ -272,7 +309,7 @@ onMounted(async () => {
               }
             }
 
-            .vk-container {
+            .kv-container {
               @include poa-center;
               z-index: 5;
               width: 90%;
@@ -431,7 +468,7 @@ onMounted(async () => {
       z-index: -1;
       left: 20%;
       top: 100px;
-      transform: translateY(-100); 
+      transform: translateY(-100);
 
       @include media-down(jumbo) {
         width: 260px;
@@ -474,6 +511,69 @@ onMounted(async () => {
         right: -7rem;
         bottom: 0;
         z-index: -1;
+      }
+    }
+  }
+
+  // copyright
+  .copyright {
+    @include d-flex(center, center);
+    text-align: center;
+    color: var(--color-white);
+    background: var(--color-main);
+    border-radius: 50px 50px 0 0;
+    padding: 30px;
+    font-weight: 600;
+
+    @include media-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  // go top
+  .page-top {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 8rem;
+    right: 3rem;
+    z-index: 999;
+
+    @include media-down(l) {
+      width: 70px;
+      height: 70px;
+      right: 1.5rem;
+    }
+
+
+    .img {
+      animation: spin 10s linear infinite;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;      
+      }
+    }
+
+    .arrow {
+      @include poa-center;
+
+      @include media-down(l) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
       }
     }
   }

@@ -11,13 +11,16 @@
               <a class="main-link" href="#HomeAbout">về chúng tôi</a>
             </li>
             <li class="main-item">
-              <a class="main-link" href="#HomeInfo">Dịch vụ</a>
+              <a class="main-link" href="#HomeInfo">Cuộc sống tài chính</a>
             </li>
             <li class="main-item">
-              <a class="main-link" href="#HomeSwiper">tư vấn</a>
+              <a class="main-link" href="#HomeSwiper">Chuyên viên tư vấn</a>
             </li>
             <li class="main-item">
-              <a class="main-link" href="#HomeFAQ">đặt vấn đề</a>
+              <a class="main-link" href="#HomeFAQ">FAQ</a>
+            </li>
+            <li class="main-item">
+              <a class="main-link" href="#HomeEvent">Hoạt động</a>
             </li>
           </ul>
           <div class="contact-btn">
@@ -56,12 +59,6 @@ export default {
       e.stopPropagation();
       jQuery(this).toggleClass("active");
       jQuery(".app-container").toggleClass("menu-show"); // 控制 nav-wrap 出現
-    });
-
-    // 點擊 page-top 回到頁面頂端
-    jQuery(".page-top").on("click", function (e) {
-      e.preventDefault(); // 阻止 <a href="#"> 的預設跳轉行為
-      jQuery("html, body").animate({ scrollTop: 0 }, 600);
     });
 
     // 單頁錨點
@@ -139,7 +136,7 @@ export default {
         gap: 15px;
       }
 
-      @include media-down(md) {
+      @include media-down(lg) {
         flex-direction: column;
         justify-content: left;
         position: absolute;
@@ -157,8 +154,9 @@ export default {
         font-weight: 700;
         padding: 10px 0;
         position: relative;
+        color: var(--color-black);
 
-        @include media-down(md) {
+        @include media-down(lg) {
           padding: 5px 0;
         }
 
@@ -192,7 +190,7 @@ export default {
         gap: 15px;
       }
 
-      @include media-down(md) {
+      @include media-down(lg) {
         position: fixed;
         bottom: 10px;
         left: 0;
@@ -208,7 +206,7 @@ export default {
           // border-radius: 0;
           padding: 0;
 
-          @include media-down(md) {
+          @include media-down(lg) {
             &:hover {
               background: var(--color-white);
             }
@@ -225,7 +223,7 @@ export default {
     .nav-hamburger {
       display: none;
 
-      @include media-down(md) {
+      @include media-down(lg) {
         display: block;
         transition: all 0.5s ease-in-out;
         position: relative;

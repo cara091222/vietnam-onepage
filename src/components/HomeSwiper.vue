@@ -454,11 +454,6 @@ onMounted(async () => {
       height: 180px;
       left: -0.5rem;
     }
-
-    @include media-down(sm) {
-      // width: 200px;
-      // height: 220px;
-    }
   }
 }
 </style>
