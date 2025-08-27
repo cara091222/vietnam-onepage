@@ -438,7 +438,7 @@ onMounted(async () => {
     z-index: 1;
     left: -1rem;
     top: -700px;
-    transform: translateY(-100);
+    // transform: translateY(-100);
 
     @include media-down(jumbo) {
       width: 220px;

@@ -1,11 +1,10 @@
 <template>
-  <div class="home-AFQ padding-share" id="HomeFAQ">
-    <div class="home-AFQ-container">
-      <div class="home-AFQ-img">
+  <div class="home-FAQ padding-share" id="HomeFAQ">
+    <div class="home-FAQ-container">
+      <div class="home-FAQ-img">
         <img src="@/assets/images/home_AFQ_img.jpg" alt="" />
       </div>
-
-      <div class="home-AFQ-accordion">
+      <div class="home-FAQ-accordion">
         <h3 class="title-en">FAQ</h3>
         <h2 class="title-main-share">Các câu hỏi thường gặp</h2>
         <div class="accordion-wrap">
@@ -55,6 +54,9 @@
         </div>
       </div>
     </div>
+    <div class="circular-b">
+      <div class="circular"></div>
+    </div>
   </div>
 </template>
 
@@ -62,7 +64,7 @@
 import $ from "jquery";
 
 export default {
-  name: "HomeAFQ",
+  name: "HomeFAQ",
   data() {
     return {
       faqList: [
@@ -76,7 +78,7 @@ export default {
           question: "Tôi muốn mua bảo hiểm, phải làm sao?",
           answer01: "5 bước nhanh để hiểu rõ về Bảo hiểm",
           answer02:
-            "Bước 1: Hãy xác định rõ mục tiêu của bạn: bảo vệ sức khoẻ, chuẩn bị cho tương lai của người thân, ....",
+            "Bước 1:Hãy xác định rõ mục tiêu của bạn: bảo vệ sức khoẻ, chuẩn bị cho tương lai của người thân, ....",
           answer03:
             "Bước 2: Các loại bảo hiểm thường gặp là bảo hiểm sức khoẻ, bảo hiểm nhân thọ, bảo hiểm tai nạn, bảo hiểm liên kết đầu tư.",
           answer04:
@@ -148,7 +150,9 @@ export default {
 <style lang="scss">
 @import "@/assets/styles/main.scss";
 
-.home-AFQ {
+.home-FAQ {
+  position: relative;
+
   &-container {
     position: relative;
     @include d-flex(center, center);
@@ -169,13 +173,13 @@ export default {
     }
   }
 
-  .home-AFQ-img {
+  .home-FAQ-img {
     border-radius: 100px;
     box-shadow: 0 0 31px 0 rgba(23, 115, 56, 0.2);
     overflow: hidden;
     max-width: 795px;
     width: 100%;
-    height: 800px;
+    height: 860px;
 
     @include media-down(jumbo) {
       height: 700px;
@@ -204,7 +208,7 @@ export default {
   }
 
   // 手風琴樣式
-  .home-AFQ-accordion {
+  .home-FAQ-accordion {
     position: relative;
     padding: 50px 0 50px 80px;
     width: 100%;
@@ -276,6 +280,10 @@ export default {
           cursor: pointer;
           gap: 15px;
 
+          @include media-down(sm) {
+            padding: 15px;
+          }
+
           &.active {
             .title-small-share {
               color: var(--color-main);
@@ -300,7 +308,7 @@ export default {
             width: 100%;
 
             @include media-down(sm) {
-                gap: 8px;
+              gap: 8px;
             }
 
             > span {
@@ -321,11 +329,7 @@ export default {
           padding: 0px 60px 20px 60px;
 
           @include media-down(sm) {
-            padding: 0px 20px 20px 48px;
-          }
-
-          > p {
-            line-height: 18px;
+            padding: 0px 20px 15px 48px;
           }
 
           p + p {
@@ -339,6 +343,39 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .circular-b {
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    right: 10rem;
+    top: 900px;
+    // transform: translateY(-200);
+
+    .circular {
+      transform: rotate(-56.36deg);
+    }
+
+    @include media-down(xxl) {
+      // top: -500px;
+    }
+
+    @include media-down(xl) {
+      right: 5rem;
+      top: 1500px;
+    }
+
+    @include media-down(md) {
+      top: 800px;
+    }
+
+    @include media-down(sm) {
+      width: 150px;
+      height: 150px;
+      top: 1200px;
+      right: 3rem;
     }
   }
 }

@@ -69,7 +69,7 @@ export default {
       jQuery(".main-link[href^='#']").on("click", function (e) {
         const target = jQuery(this.getAttribute("href"));
         if (target.length) {
-          e.preventDefault(); 
+          e.preventDefault();
           jQuery("html, body").animate(
             { scrollTop: target.offset().top },
             800,
@@ -146,7 +146,7 @@ export default {
         top: -20px;
         right: 0;
         padding-top: 78px;
-        width: 70%;
+        width: 60%;
         height: 100vh;
         background-color: #ffffff;
         transform: translateX(100%);
@@ -207,6 +207,16 @@ export default {
           margin: auto;
           // border-radius: 0;
           padding: 0;
+
+          @include media-down(md) {
+            &:hover {
+              background: var(--color-white);
+            }
+
+            &:active {
+              background: var(--color-white);
+            }
+          }
         }
       }
     }

@@ -573,6 +573,12 @@ export default {
 
         @include media-down(lg) {
           padding-top: 15px;
+          width: 80%;
+          margin: auto;
+        }
+
+        @include media-down(md) {
+          width: 100%;
         }
       }
     }

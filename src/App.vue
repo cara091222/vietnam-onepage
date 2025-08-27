@@ -22,7 +22,7 @@
                 </h2>
               </div>
               <img :src="item.src" :alt="item.alt" class="desk-bg" />
-              <!-- <img :src="item.mobile" :alt="item.alt" class="mobile-bg" /> -->
+              <img :src="item.mobile" :alt="item.alt" class="mobile-bg" />
             </div>
           </div>
         </div>
@@ -92,6 +92,7 @@
     <HomeInfo />
     <HomeSwiper />
     <HomeFAQ />
+    <HomeEvent />
   </div>
 </template>
 
@@ -112,25 +113,27 @@ import HomeAbout from "./components/HomeAbout.vue";
 import HomeInfo from "./components/HomeInfo.vue";
 import HomeSwiper from "./components/HomeSwiper.vue";
 import HomeFAQ from "./components/HomeFAQ.vue";
+import HomeEvent from "./components/HomeEvent.vue";
+
 
 const banner = [
   {
     src: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/banner400x750.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
     alt: "Banner1",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url).href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url).href,
     alt: "Banner3",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
@@ -287,6 +290,7 @@ onMounted(async () => {
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
+                  object-position: 80% 0;
                 }
               }
 
@@ -339,17 +343,17 @@ onMounted(async () => {
               }
             }
 
-            // .desk-bg {
-            //   @include media-down(sm) {
-            //     display: none;
-            //   }
-            // }
+            .desk-bg {
+              @include media-down(sm) {
+                display: none;
+              }
+            }
 
-            // .mobile-bg {
-            //   @include media-down(sm) {
-            //     display: block;
-            //   }
-            // }
+            .mobile-bg {
+              @include media-down(sm) {
+                display: block;
+              }
+            }
 
             img {
               width: 100%;
