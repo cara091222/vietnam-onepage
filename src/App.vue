@@ -21,7 +21,12 @@
                   {{ item.subtitle }}
                 </h2>
               </div>
-              <img :src="item.src" :alt="item.alt" class="desk-bg" />
+              <img
+                :src="item.src"
+                :alt="item.alt"
+                class="desk-bg"
+                :style="{ objectPosition: index === 0 ? '80% 0' : '50% 50%' }"
+              />
               <img :src="item.mobile" :alt="item.alt" class="mobile-bg" />
             </div>
           </div>
@@ -190,10 +195,10 @@ onMounted(async () => {
     modules: [Autoplay, EffectFade],
     loop: true,
     speed: 1500,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -327,7 +332,6 @@ onMounted(async () => {
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
-                  object-position: 80% 0;
                 }
               }
 
@@ -532,7 +536,7 @@ onMounted(async () => {
 
   // go top
   .page-top {
-    display: inline-block;
+    display: none;
     width: 100px;
     height: 100px;
     position: fixed;
@@ -546,7 +550,6 @@ onMounted(async () => {
       right: 1.5rem;
     }
 
-
     .img {
       animation: spin 10s linear infinite;
       width: 100%;
@@ -554,7 +557,7 @@ onMounted(async () => {
 
       img {
         width: 100%;
-        height: 100%;      
+        height: 100%;
       }
     }
 

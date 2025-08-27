@@ -51,7 +51,7 @@
                     <p class="unit">năm</p>
                   </div>
                   <div class="year-item">
-                    <p class="title">ở Đài Loan</p>
+                    <p class="title">Thâm niên</p>
                     <p class="year">{{ slide.seniority }}</p>
                     <p class="unit">năm</p>
                   </div>
@@ -290,7 +290,7 @@ onMounted(async () => {
           overflow: hidden;
           position: relative;
 
-          @include media-down(sm) {
+          @include media-down(jumbo) {
             height: 360px;
           }
 
@@ -316,13 +316,14 @@ onMounted(async () => {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
           }
         }
 
         .content {
           padding: 30px;
 
-          @include media-down(sm) {
+          @include media-down(jumbo) {
             padding: 20px;
           }
 
