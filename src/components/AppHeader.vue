@@ -133,7 +133,7 @@ export default {
       gap: 25px;
 
       @include media-down(lg) {
-        gap: 15px;
+        gap: 0;
       }
 
       @include media-down(lg) {
@@ -143,21 +143,31 @@ export default {
         top: -20px;
         right: 0;
         padding-top: 78px;
-        width: 60%;
+        width: 50%;
         height: 100vh;
         background-color: #ffffff;
         transform: translateX(100%);
         transition: transform 0.3s ease;
       }
 
+      @include media-down(sm) {
+        width: 60%;
+      }
+
+      .main-item {
+        @include media-down(lg) {
+          padding: 12px 0;
+        }
+      }
+
       .main-link {
         font-weight: 700;
-        padding: 10px 0;
+        padding: 30px 0;
         position: relative;
         color: var(--color-black);
 
         @include media-down(lg) {
-          padding: 5px 0;
+          padding: 12px 0;
         }
 
         &::after {
@@ -166,7 +176,7 @@ export default {
           bottom: 0;
           left: 0;
           width: 0;
-          height: 3px;
+          height: 5px;
           background: var(--color-main);
           transition: all 0.3s ease-in-out;
         }

@@ -342,7 +342,7 @@ onMounted(async () => {
                 font-weight: 700;
                 line-height: 52px;
                 letter-spacing: 2px;
-                margin: 38px 0 20px 0;
+                padding: 42px 0 20px 0;
                 width: 60%;
 
                 @include media-down(xxl) {
@@ -350,6 +350,7 @@ onMounted(async () => {
                   line-height: 48px;
                   text-align: center;
                   width: 100%;
+                  padding: 20px 0;
                 }
 
                 @include media-down(lg) {
@@ -360,7 +361,7 @@ onMounted(async () => {
                 @include media-down(sm) {
                   @include fz(30);
                   line-height: 34px;
-                  margin: 20px 0;
+                  padding: 10px 0;
                 }
               }
 
