@@ -149,53 +149,6 @@ export default {
       $item.find(".accordion-content").slideToggle();
       $item.find(".accordion-header").toggleClass("active");
     });
-
-    // ------- 自製捲軸 + 漸層提示 -------
-    const scrollBox = this.$el.querySelector(".accordion-wrap");
-    const content = this.$el.querySelector(".accordion-wrap"); // 內容就是自己
-    const thumb = document.querySelector(".thumb");
-    const fadeTop = document.querySelector(".fade-top");
-    const fadeBottom = document.querySelector(".fade-bottom");
-
-    // 判斷是否為手機裝置 (你也可以改用 window.innerWidth)
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    function updateScroll() {
-      if (!isMobile) return; // 桌面版直接跳出，不處理
-
-      const scrollHeight = content.scrollHeight; // 內容總高度
-      const visibleHeight = scrollBox.clientHeight; // 可見高度
-      const scrollTop = scrollBox.scrollTop; // 滾動位置
-
-      // 計算 thumb 高度與位置
-      const thumbHeight = Math.max(
-        (visibleHeight / scrollHeight) * visibleHeight,
-        20
-      );
-      const thumbTop =
-        (scrollTop / (scrollHeight - visibleHeight)) *
-        (visibleHeight - thumbHeight);
-
-      thumb.style.height = thumbHeight + "px";
-      thumb.style.top = thumbTop + "px";
-
-      // 控制漸層顯示
-      fadeTop.style.display = scrollTop > 5 ? "block" : "none";
-      fadeBottom.style.display =
-        scrollTop + visibleHeight < scrollHeight - 5 ? "block" : "none";
-    }
-
-    // 只在手機才綁定事件
-    if (isMobile) {
-      scrollBox.addEventListener("scroll", updateScroll);
-      window.addEventListener("resize", updateScroll);
-      updateScroll();
-    } else {
-      // 桌面 → 隱藏假捲軸 & 漸層
-      thumb.parentElement.style.display = "none";
-      fadeTop.style.display = "none";
-      fadeBottom.style.display = "none";
-    }
   },
 };
 </script>
@@ -289,17 +242,22 @@ export default {
 
     .accordion-wrap {
       width: 806px;
-      height: 520px;
+      max-height: 520px;
       overflow-y: auto;
       position: relative;
+      // border-right: 3px solid #f1f1f1 ;
 
       @include media-down(jumbo) {
         width: 706px;
-        height: 420px;
+        max-height: 420px;
       }
 
       @include media-down(xl) {
         width: 100%;
+      }
+
+      @include media-down (l) {
+        border-right: 3px solid #f1f1f1 ;
       }
 
       /* 滾軸整體 */
@@ -323,62 +281,7 @@ export default {
       &::-webkit-scrollbar-thumb:hover {
         background: var(--color-main);
       }
-
-      .scroll-box {
-        position: fixed;
-        width: 300px;
-        height: 100%;
-        overflow-y: auto;
-        padding-right: 10px; /* 預留空間避免文字壓到假捲軸 */
-        border: 1px solid #ddd;
-      }
-
-      /* 假捲軸外框 */
-      .fake-scrollbar {
-        position: absolute;
-        top: 0;
-        right: 2px;
-        width: 8px;
-        height: 100%;
-        border-radius: 100px;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
-      }
-
-      /* 假捲軸滑塊 */
-      .fake-scrollbar .thumb {
-        width: 100%;
-        background: var(--color-main);
-        position: absolute;
-        border-radius: 100px;
-        top: 0;
-        height: 40px; /* JS 會覆蓋 */
-      }
-
-      /* 漸層提示（上方） */
-      .fade-top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 10px; /* 預留捲軸空間 */
-        height: 20px;
-        background: linear-gradient(to bottom, white, transparent);
-        pointer-events: none;
-        display: none; /* 預設隱藏，JS 控制 */
-      }
-
-      /* 漸層提示（下方） */
-      .fade-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 10px;
-        height: 20px;
-        background: linear-gradient(to top, white, transparent);
-        pointer-events: none;
-        display: none; /* 預設隱藏，JS 控制 */
-      }
-
+      
       .accordion-item {
         border-bottom: 1px solid #dadada;
         margin-right: 20px;
