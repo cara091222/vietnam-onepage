@@ -245,7 +245,7 @@ export default {
       max-height: 520px;
       overflow-y: auto;
       position: relative;
-      // border-right: 3px solid #f1f1f1 ;
+    
 
       @include media-down(jumbo) {
         width: 706px;
@@ -257,7 +257,15 @@ export default {
       }
 
       @include media-down (l) {
-        border-right: 3px solid #f1f1f1 ;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 5px;
+          height: 100vh;
+          top: 0;
+          right: 0;
+          background: #f1f1f1;
+        }
       }
 
       /* 滾軸整體 */
