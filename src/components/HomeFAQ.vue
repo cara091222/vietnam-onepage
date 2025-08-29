@@ -246,9 +246,11 @@ export default {
       height: 75%;
       background: #f1f1f1;
       display: none;
+      z-index: -1;
 
       @include media-down(sm) {
         display: block;
+        
       }
     }
 
