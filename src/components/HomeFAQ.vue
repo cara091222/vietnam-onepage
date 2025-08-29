@@ -51,13 +51,6 @@
               <p>{{ item.answer06 }}</p>
             </div>
           </div>
-          <!-- 自製捲軸 -->
-          <div class="fake-scrollbar">
-            <div class="thumb"></div>
-          </div>
-          <!-- 上下漸層提示 -->
-          <div class="fade-top"></div>
-          <div class="fade-bottom"></div>
         </div>
       </div>
     </div>
@@ -188,13 +181,17 @@ export default {
     height: 860px;
 
     @include media-down(jumbo) {
-      height: 700px;
+      height: 650px;
+      border-radius: 80px;
     }
 
     @include media-down(xl) {
       max-width: 100%;
       height: 500px;
-      border-radius: 80px;
+    }
+
+    @include media-down(l) {
+      height: 430px;
     }
 
     @include media-down(sm) {
@@ -245,7 +242,6 @@ export default {
       max-height: 520px;
       overflow-y: auto;
       position: relative;
-    
 
       @include media-down(jumbo) {
         width: 706px;
@@ -256,16 +252,8 @@ export default {
         width: 100%;
       }
 
-      @include media-down (l) {
-        &::before {
-          content: '';
-          position: absolute;
-          width: 5px;
-          height: 100vh;
-          top: 0;
-          right: 0;
-          background: #f1f1f1;
-        }
+      @include media-down(l) {
+        border-right: 3px solid #f1f1f1;
       }
 
       /* 滾軸整體 */
@@ -289,7 +277,7 @@ export default {
       &::-webkit-scrollbar-thumb:hover {
         background: var(--color-main);
       }
-      
+
       .accordion-item {
         border-bottom: 1px solid #dadada;
         margin-right: 20px;

@@ -433,6 +433,11 @@ export default {
         margin-right: 0rem;
         top: 4rem;
       }
+
+      @include media-down(tiny) {
+        margin-right: -1rem;
+        top: 4rem;
+      }
     }
 
     .tab-item-c {
@@ -492,12 +497,17 @@ export default {
 
       @include media-down(sm) {
         margin-left: 0rem;
-        top: 11rem;
+        top: 10.5rem;
       }
 
       @include media-down(xs) {
-        margin-left: -1rem;
+        margin-left: -0.5rem;
         top: 10rem;
+      }
+
+      @include media-down(tiny) {
+        margin-left: -1rem;
+        top: 9.5rem;
       }
     }
   }

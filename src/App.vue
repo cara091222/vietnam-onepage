@@ -72,6 +72,24 @@
         </svg>
       </div>
       <!--Waves end-->
+      <div class="scroll-down">
+        <p class="text">scroll down</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="43"
+          viewBox="0 0 32 53"
+          fill="none"
+        >
+          <path
+            d="M16 1V51.5M16 51.5L31 36.75M16 51.5L1 36.75"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
     </div>
     <div class="home-intro">
       <div class="container-share">
@@ -195,10 +213,10 @@ onMounted(async () => {
     modules: [Autoplay, EffectFade],
     loop: true,
     speed: 1500,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -407,6 +425,59 @@ onMounted(async () => {
         }
       }
     }
+
+    .scroll-down {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 99;
+      bottom: 4rem;
+      @include d-flex(center, center, column);
+      gap: 15px;
+      opacity: 0;
+
+      @include media-between(xl , jumbo) {
+        opacity: 1;
+      }
+
+      @include media-down(xs) {
+        opacity: 1;
+      }
+
+      @include media-down(tiny) {
+        opacity: 0;
+      }
+        
+
+      p {
+        @include en-fontF;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--color-white);
+      }
+
+      svg {
+        position: relative;
+        animation: line-animation 2.5s ease-in-out 0s infinite normal;
+      }
+
+      @keyframes line-animation {
+        0% {
+          bottom: 20px;
+          opacity: 0;
+        }
+        50% {
+          bottom: 10px;
+          opacity: 1;
+        }
+        100% {
+          bottom: 0;
+          opacity: 0;
+        }
+      }
+    }
   }
 
   // Home Intro
@@ -543,7 +614,7 @@ onMounted(async () => {
     position: fixed;
     bottom: 8rem;
     right: 3rem;
-    z-index: 999;
+    z-index: 99;
 
     @include media-down(l) {
       width: 70px;
