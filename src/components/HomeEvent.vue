@@ -1,7 +1,7 @@
 <template>
   <div class="home-event" id="HomeEvent">
     <div class="container-share">
-      <div class="home-event-wrap padding-small-share">
+      <div class="home-event-wrap">
         <h3 class="title-en">Event</h3>
         <h2 class="title-main-share">Hoạt động</h2>
         <p class="content">
@@ -24,7 +24,7 @@
 </template>
 
 <style lang="scss">
-@import "@/assets/styles/main.scss";
+@import '@/assets/styles/main.scss';
 
 .home-event {
   position: relative;
@@ -41,6 +41,12 @@
   .home-event-wrap {
     border-radius: 50px;
     background: #fafafa;
+    padding: 100px;
+
+    @include media-down(lg) {
+      border-radius: 30px;
+      padding: 50px;
+    }
 
     .content {
       color: var(--color-grey);
@@ -66,15 +72,15 @@
     }
 
     @include media-down(xxl) {
-       top: -1100px;
-       left: -1rem;
+      top: -1100px;
+      left: -1rem;
     }
 
     @include media-down(lg) {
       top: -1300px;
     }
 
-     @include media-down(l) {
+    @include media-down(l) {
       top: -1000px;
     }
   }

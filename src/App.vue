@@ -11,7 +11,7 @@
               class="swiper-slide kv-swiper-slide"
             >
               <div class="container-share kv-container">
-                <div class="en-title-svg animation__el fadeUp ">
+                <div class="en-title-svg animation__el fadeUp">
                   <img src="@/assets/images/en_title.png" alt="" />
                 </div>
                 <h1 class="title animation__el fadeUp delay__750">
@@ -74,21 +74,7 @@
       <!--Waves end-->
       <div class="scroll-down">
         <p class="text">scroll down</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="43"
-          viewBox="0 0 32 53"
-          fill="none"
-        >
-          <path
-            d="M16 1V51.5M16 51.5L31 36.75M16 51.5L1 36.75"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <div class="line"></div>
       </div>
     </div>
     <div class="home-intro">
@@ -460,29 +446,32 @@ onMounted(async () => {
 
       p {
         @include en-fontF;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 11px;
         letter-spacing: 3px;
         text-transform: uppercase;
         color: var(--color-white);
       }
 
-      svg {
+      .line {
         position: relative;
-        animation: line-animation 2.5s ease-in-out 0s infinite normal;
+        width: 1px;
+        height: 40px;
+        background: var(--color-white);
+        animation: line-animation 2s ease-in-out 0s infinite normal;
       }
 
       @keyframes line-animation {
         0% {
-          bottom: 20px;
+          bottom: 15px;
           opacity: 0;
         }
         50% {
-          bottom: 10px;
+          bottom: 5px;
           opacity: 1;
         }
         100% {
-          bottom: 0;
+          bottom: -5px;
           opacity: 0;
         }
       }
@@ -646,8 +635,8 @@ onMounted(async () => {
       @include poa-center;
 
       @include media-down(l) {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
       }
     }
 
