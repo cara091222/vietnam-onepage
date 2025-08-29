@@ -51,6 +51,7 @@
               <p>{{ item.answer06 }}</p>
             </div>
           </div>
+          <div class="border"></div>
         </div>
       </div>
     </div>
@@ -252,8 +253,18 @@ export default {
         width: 100%;
       }
 
-      @include media-down(l) {
-        border-right: 3px solid #f1f1f1;
+      .border {
+        position: absolute;
+        right: 3px;
+        top: 0;
+        width: 3px;
+        height: 100vh;
+        background: #f1f1f1;
+        display: none;
+
+        @include media-down(l) {
+          display: block;
+        }
       }
 
       /* 滾軸整體 */

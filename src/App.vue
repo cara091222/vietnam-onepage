@@ -11,7 +11,7 @@
               class="swiper-slide kv-swiper-slide"
             >
               <div class="container-share kv-container">
-                <div class="en-title-svg animation__el fadeUp">
+                <div class="en-title-svg animation__el fadeUp ">
                   <img src="@/assets/images/en_title.png" alt="" />
                 </div>
                 <h1 class="title animation__el fadeUp delay__750">
@@ -237,19 +237,28 @@ onMounted(async () => {
         prevSlide?.querySelectorAll(".fadeUp").forEach((el) => {
           el.classList.remove("in");
           el.classList.add("out");
+
+          // 等動畫跑完後再清掉 out，恢復初始狀態
+          el.addEventListener("animationend", function handler() {
+            if (el.classList.contains("out")) {
+              el.classList.remove("out");
+            }
+            el.removeEventListener("animationend", handler);
+          });
         });
 
-        // 新 slide 預先移除舊 class，準備進場
+        // 新 slide → 預先清空狀態
         const activeSlide = this.slides[this.activeIndex];
         activeSlide?.querySelectorAll(".fadeUp").forEach((el) => {
           el.classList.remove("in", "out");
         });
       },
+
       slideChangeTransitionEnd() {
         // 新 slide → 淡入
         const activeSlide = this.slides[this.activeIndex];
         activeSlide?.querySelectorAll(".fadeUp").forEach((el) => {
-          void el.offsetWidth; // 強制重繪
+          void el.offsetWidth; // 強制重繪，確保動畫能觸發
           el.classList.add("in");
         });
       },
@@ -436,18 +445,18 @@ onMounted(async () => {
       gap: 15px;
       opacity: 0;
 
-      @include media-between(xl , jumbo) {
+      @include media-between(xl, jumbo) {
         opacity: 1;
       }
 
       @include media-down(xs) {
         opacity: 1;
+        bottom: 7rem;
       }
 
       @include media-down(tiny) {
         opacity: 0;
       }
-        
 
       p {
         @include en-fontF;

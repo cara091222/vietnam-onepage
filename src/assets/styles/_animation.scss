@@ -1,222 +1,132 @@
 /*  ===== 整站動態設定 ===== */
 // 波浪
 .waves-wrapper {
-    .waves {
-        position: absolute;
-        width: 100%;
-        height: 12vh;
-        min-height: 100px;
-        max-height: 150px;
-        bottom: 0;
-        z-index: 3;
+  .waves {
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    min-height: 100px;
+    max-height: 150px;
+    bottom: 0;
+    z-index: 3;
+  }
+
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
     }
 
-    .parallax>use {
-        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    100% {
+      transform: translate3d(85px, 0, 0);
     }
-
-    .parallax>use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
-    }
-
-    .parallax>use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
-    }
-
-    .parallax>use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
-    }
-
-    .parallax>use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
-    }
-
-    @keyframes move-forever {
-        0% {
-            transform: translate3d(-90px, 0, 0);
-        }
-
-        100% {
-            transform: translate3d(85px, 0, 0);
-        }
-    }
+  }
 }
 
 // 淡入淡出
 .animation__el {
-    transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 
-    &.delay {
-        opacity: 0;
-    }
+  // 通用延遲
+  &.delay__750 {
+    transition-delay: 0.75s;
+  }
+  &.delay__1000 {
+    transition-delay: 1s;
+  }
+  &.delay__1500 {
+    transition-delay: 1.5s;
+  }
 
-    &.slow {
-        transition: all 1.2s ease-in-out;
-    }
-
-    &.fadeUp {
-        transform: translateY(50px);
-        opacity: 0;
-
-        &.in {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        &.out {
-            transform: translateY(0);
-            opacity: 0;
-        }
-
-        &.delay__750 {
-            transition-delay: 0.75s;
-        }
-
-        &.delay__1000 {
-            transition-delay: 1s;
-        }
-
-        &.delay__1500 {
-            transition-delay: 1.2s;
-        }
-    }
-
-    &.fadeIn {
-        opacity: 0;
-
-        &.in {
-            opacity: 1;
-        }
-    }
-
-    &.fadeRight {
-        transform: translateX(60px);
-        opacity: 0;
-
-        &.in {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        &.delay__750 {
-            transition-delay: 0.75s;
-        }
-    }
-
-    &.fadeLeft {
-        transform: translateX(-60px);
-        opacity: 0;
-
-        &.in {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        &.delay__750 {
-            transition-delay: 0.75s;
-        }
-    }
-
-    &.fadeLeftLarge {
-        transform: translateX(-100%);
-        opacity: 0;
-
-        &.in {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    &.zoomIn {
-        transform: translate(0%, 250%) scale(3);
-        opacity: 0;
-        transition-delay: 0.5s;
-
-        &.in {
-            transform: translate(0%, 0%) scale(1);
-            opacity: 1;
-        }
-
-        &.delay {
-            transition-delay: 1.2s;
-        }
-    }
-
-    &.zoomOut {
-        transform: scale3d(0.3, 0.3, 0.3) translateZ(-500px);
-        opacity: 0;
-        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-        transition-delay: 0.5s;
-
-        &.in {
-            transform: scale3d(1, 1, 1) translateZ(0);
-            opacity: 1;
-        }
-
-        &.delay {
-            transition-delay: 2s;
-        }
-    }
-
-    .fadeRightMedium {
-        transition: all 1s ease;
-        transform: translateX(100%);
-        opacity: 0;
-
-        &.delay__750 {
-            transition-delay: 0.75s;
-        }
-
-        &.delay__1500 {
-            transition-delay: 1.5s;
-        }
-
-        &.delay__2250 {
-            transition-delay: 2.25s;
-        }
-
-        &.delay__3000 {
-            transition-delay: 3s;
-        }
-
-        &.delay__3750 {
-            transition-delay: 3.75s;
-        }
-
-        &.delay__4500 {
-            transition-delay: 4.5s;
-        }
-
-        &.delay__5250 {
-            transition-delay: 5.25s;
-        }
-    }
+  /* ===== Fade Up 進出 ===== */
+  &.fadeUp {
+    transform: translateY(50px);
+    opacity: 0;
 
     &.in {
-        .fadeRightMedium {
-            transform: translateX(0);
-            opacity: 1;
-        }
+      transform: translateY(0);
+      opacity: 1;
     }
+
+    &.out {
+      transform: translateY(50px); // 回到下面
+      opacity: 0;
+    }
+  }
+
+  /* ===== Fade Right 進出 ===== */
+  &.fadeRight {
+    transform: translateX(60px);
+    opacity: 0;
+
+    &.in {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    &.out {
+      transform: translateX(60px);
+      opacity: 0;
+    }
+  }
+
+  /* ===== Fade Left 進出 ===== */
+  &.fadeLeft {
+    transform: translateX(-60px);
+    opacity: 0;
+
+    &.in {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    &.out {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+  }
 }
 
 // 浮動背景
-.circular-a , .circular-b {
-    position: absolute;
-    will-change: transform;
+.circular-a,
+.circular-b {
+  position: absolute;
+  will-change: transform;
 }
 .circular {
   border-radius: 100rem;
   filter: blur(11.5px);
   flex-shrink: 0;
   aspect-ratio: 1/1;
-  background: linear-gradient(180deg, rgba(222, 239, 219, 0.40) 19.23%, rgba(76, 161, 100, 0.40) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(222, 239, 219, 0.4) 19.23%,
+    rgba(76, 161, 100, 0.4) 100%
+  );
   pointer-events: none; /* 不擋點擊事件 */
   transition: transform 0.2s ease; /* 可選，增加平滑感 */
   transform: translateX(-50%) rotate(25.385deg);
 }
-
