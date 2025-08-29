@@ -27,7 +27,6 @@
                 class="desk-bg"
                 :style="{ objectPosition: index === 0 ? '80% 0' : '50% 50%' }"
               />
-              <img :src="item.mobile" :alt="item.alt" class="mobile-bg" />
             </div>
           </div>
         </div>
@@ -148,24 +147,22 @@ import HomeEvent from "./components/HomeEvent.vue";
 const banner = [
   {
     src: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    alt: "Banner1",
+    // mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
+    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url)
-      .href,
-    alt: "Banner3",
+    // mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url).href,
+    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url)
-      .href,
-    alt: "Banner3",
+    // mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url).href,
+    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
     title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
     subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
   },
@@ -398,17 +395,17 @@ onMounted(async () => {
               }
             }
 
-            .desk-bg {
-              @include media-down(sm) {
-                display: none;
-              }
-            }
+            // .desk-bg {
+            //   @include media-down(sm) {
+            //     display: none;
+            //   }
+            // }
 
-            .mobile-bg {
-              @include media-down(sm) {
-                display: block;
-              }
-            }
+            // .mobile-bg {
+            //   @include media-down(sm) {
+            //     display: block;
+            //   }
+            // }
 
             img {
               width: 100%;

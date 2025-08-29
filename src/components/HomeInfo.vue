@@ -17,7 +17,7 @@
             <div class="green-bg"></div>
           </div>
           <div class="img-bg">
-            <img :src="info.img" alt="" />
+            <img :src="info.img" alt="info.alt" />
           </div>
         </div>
       </transition-group>
@@ -34,31 +34,37 @@ const infos = ref([
     title: "Mở tài khoản ngân hàng/bưu điện",
     desc: "(Sở Di dân - Bộ Nội Chính)",
     img: new URL("@/assets/images/info_bg01.jpg", import.meta.url).href,
+    alt: "Mở tài khoản ngân hàng/bưu điện",
   },
   {
     title: "Kê khai thuế",
     desc: "(Trang dịch vụ khai và nộp thuế – Bộ Tài chính)",
     img: new URL("@/assets/images/info_bg02.jpg", import.meta.url).href,
+    alt: "Kê khai thuế",
   },
   {
     title: "Học tập ngôn ngữ",
     desc: "(Theo quy định của chính quyền địa phương từng khu vực)",
     img: new URL("@/assets/images/info_bg03.jpg", import.meta.url).href,
+    alt: "Học tập ngôn ngữ",
   },
   {
     title: "Thông tin việc làm",
     desc: "(Trang phát triển bồi dưỡng năng lực Tân di dân)",
     img: new URL("@/assets/images/info_bg04.jpg", import.meta.url).href,
+    alt: "Thông tin việc làm",
   },
   {
     title: "Thông tin cư trú",
     desc: "(Sở Di dân - Bộ Nội Chính)",
     img: new URL("@/assets/images/info_bg05.jpg", import.meta.url).href,
+    alt: "Thông tin cư trú",
   },
   {
     title: "Dịch vụ bảo hiểm",
     desc: "(Đội ngũ chuyên viên tư vấn Việt Nam tại Cathay Life)",
     img: new URL("@/assets/images/info_bg06.jpg", import.meta.url).href,
+    alt: "Dịch vụ bảo hiểm",
   },
 ]);
 
