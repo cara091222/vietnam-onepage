@@ -51,8 +51,8 @@
               <p>{{ item.answer06 }}</p>
             </div>
           </div>
-          <div class="border"></div>
         </div>
+        <div class="border"></div>
       </div>
     </div>
     <div class="circular-b">
@@ -238,6 +238,20 @@ export default {
       }
     }
 
+    .border {
+      position: absolute;
+      right: 3px;
+      bottom: 0;
+      width: 3px;
+      height: 75%;
+      background: #f1f1f1;
+      display: none;
+
+      @include media-down(sm) {
+        display: block;
+      }
+    }
+
     .accordion-wrap {
       width: 806px;
       max-height: 520px;
@@ -251,20 +265,6 @@ export default {
 
       @include media-down(xl) {
         width: 100%;
-      }
-
-      .border {
-        position: absolute;
-        right: 3px;
-        top: 0;
-        width: 3px;
-        height: 100vh;
-        background: #f1f1f1;
-        display: none;
-
-        @include media-down(l) {
-          display: block;
-        }
       }
 
       /* 滾軸整體 */
