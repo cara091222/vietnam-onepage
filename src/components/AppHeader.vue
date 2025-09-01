@@ -107,7 +107,7 @@ export default {
   }
 
   .app-logo {
-    width: 150px;
+    width: 198px;
     height: 100%;
 
     img {
@@ -162,7 +162,7 @@ export default {
 
       .main-link {
         font-weight: 700;
-        padding: 30px 0;
+        padding: 31px 0;
         position: relative;
         color: var(--color-black);
 
