@@ -110,6 +110,10 @@ export default {
     width: 198px;
     height: 100%;
 
+    @include media-down(sm) {
+      width: 160px;
+    }
+
     img {
       width: 100%;
       height: 100%;
