@@ -83,6 +83,7 @@ body{
 }
 
 .title-en {
+    display: inline-block;
     @include en-fontF;
     font-size: 78px;
     font-style: normal;

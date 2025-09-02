@@ -204,12 +204,12 @@ onMounted(async () => {
         spaceBetween: 40,
       },
       700: {
-        // 700~1024
+        // 699~1024
         slidesPerView: 2,
         spaceBetween: 40,
       },
       1025: {
-        // 768~1279
+        // 700~1379
         slidesPerView: 3,
         spaceBetween: 40,
       },
