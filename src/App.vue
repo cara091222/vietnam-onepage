@@ -25,7 +25,7 @@
                 :src="item.src"
                 :alt="item.alt"
                 class="desk-bg"
-                :style="{ objectPosition: index === 0 ? '80% 0' : '50% 50%' }"
+                :style="{ objectPosition: index === 0 ? '90% 0' : '50% 50%' }"
               />
             </div>
           </div>
@@ -148,23 +148,23 @@ const banner = [
   {
     src: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
     // mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
-    title: "Nền tảng riêng dành cho người Việt Tại Đài Loan ",
-    subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
+    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    title: "Nền tảng dành riêng cho người Việt",
+    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
     // mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url).href,
-    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
-    title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
-    subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
+    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    title: "Nền tảng dành riêng cho người Việt",
+    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
     // mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url).href,
-    alt: "Cathay Life Nền tảng riêng dành cho người Việt Tại Đài Loan ",
-    title: "Nền tảng riêng dành cho người Việt Tại Đài Loan",
-    subtitle: "Bắt đầu bảo vệ tài chính vững chắc ngay từ hôm nay",
+    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    title: "Nền tảng dành riêng cho người Việt",
+    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
   },
 ];
 
@@ -182,7 +182,7 @@ const content = [
     list: "Cách kê khai và nộp thuế, sợ bị phạt nếu đóng thuế chậm?",
   },
   {
-    list: "TThiếu niềm tin, không biết thông tin nào là chính xác?",
+    list: "Thiếu niềm tin, không biết thông tin nào là chính xác?",
   },
   {
     list: "Không nắm rõ pháp luật, gặp vấn đề không biết cách bảo vệ quyền lợi của bản thân?",

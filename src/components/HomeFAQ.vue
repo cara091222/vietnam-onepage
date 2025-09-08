@@ -72,15 +72,15 @@ export default {
       faqList: [
         {
           question:
-            "Bảo hiểm y tế, bảo hiểm lao động và có các phúc lợi xã hội Đài Loan nào, tôi có đủ điều kiện không, làm sao để đăng ký?",
+            "Có bảo hiểm y tế, bảo hiểm lao động và các phúc lợi xã hội Đài Loan nào, tôi có đủ điều kiện không, làm sao để đăng ký?",
           answer01:
-            "bảo hiểm xã hội (Phúc lợi bảo hiểm) và bảo hiểm hưu trí, quyền lợi lao động (Việc làm, quy định lao động,..)、nguồn tài nguyên (trang web các huyện thành phố, trang phát triển và bồi dưỡng năng lực dành cho Tân di dân), những thông tin trên sẽ thực hiện theo quy định của các huyện, thành phố.",
+            "Thông tin y tế (Bảo hiểm y tế, kiểm tra tiền sản, …)、bảo hiểm xã hội (Phúc lợi bảo hiểm) và bảo hiểm hưu trí, quyền lợi lao động (Việc làm, quy định lao động,..)、nguồn tài nguyên (trang web các huyện thành phố, Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới), những thông tin trên sẽ thực hiện theo quy định của các huyện, thành phố.",
         },
         {
           question: "Tôi muốn mua bảo hiểm, phải làm sao?",
           answer01: "5 bước nhanh để hiểu rõ về Bảo hiểm",
           answer02:
-            "Bước 1:Hãy xác định rõ mục tiêu của bạn: bảo vệ sức khoẻ, chuẩn bị cho tương lai của người thân, ....",
+            "Bước 1: Hãy xác định rõ mục tiêu của bạn: bảo vệ sức khoẻ, chuẩn bị cho tương lai của người thân, ....",
           answer03:
             "Bước 2: Các loại bảo hiểm thường gặp là bảo hiểm sức khoẻ, bảo hiểm nhân thọ, bảo hiểm tai nạn, bảo hiểm liên kết đầu tư.",
           answer04:
@@ -92,9 +92,9 @@ export default {
         },
         {
           question:
-            "Tôi có nhu cầu hỗ trợ về cuộc sống tại Đài Loan, như thị thực, đổi bằng lái xe quốc tế, công việc, nuôi dạy con cái, nên tìm đến ai hỗ trợ ?",
-          answer01:
-            "Nếu bạn có nhu cầu liên quan đến thị thực, cư trú, việc làm, giáo dục – văn hóa, thuế, bảo hiểm y tế, giao thông (đổi bằng lái xe), dịch vụ việc làm, y tế – sức khỏe, an toàn cá nhân, nuôi dạy con cái, dịch vụ phúc lợi, thông tin pháp lý hoặc các vấn đề đời sống khác, có thể gọi đến Đường dây nóng tư vấn cho người nước ngoài tại Đài Loan – 1990 (miễn phí).",
+            "Tôi có nhu cầu hỗ trợ về cuộc sống tại Đài Loan, như thị thực, đổi bằng lái xe quốc tế, công việc hoặcnuôi dạy con cái, có thể tìm đến ai tư vấn ?" ,         
+          answer01:          
+            "Nếu bạn có nhu cầu liên quan đến thị thực, cư trú, việc làm, giáo dục – văn hóa, thuế, bảo hiểm y tế, giao thông (đổi bằng lái xe), dịch vụ việc làm, y tế – sức khỏe, an toàn cá nhân, nuôi dạy con cái, dịch vụ phúc lợi, tư vấn pháp lý hoặc các vấn đề đời sống khác, có thể gọi đến Đường dây nóng tư vấn cho người nước ngoài tại Đài Loan – 1990 (miễn phí).",
           answer02:
             "Dịch vụ tư vấn được cung cấp 24/7 bằng tiếng Trung và tiếng Anh, và bằng tiếng Việt từ thứ Hai đến thứ Sáu (trừ các ngày lễ và ngày nghỉ khác), trong khung giờ 9:00 sáng đến 5:00 chiều.",
           answer03:
@@ -104,13 +104,13 @@ export default {
           question:
             "Nếu tôi gặp tranh chấp lao động hoặc bị đối xử không công bằng thì phải làm gì?",
           answer01:
-            "Khi bạn gặp tranh chấp lao động hoặc bị đối xử bất công tại Đài Loan, hãy ngay lập tức gọi đến Đường dây nóng tư vấn khiếu nại lao động 1955 (miễn phí, hoạt động 24/24). Đường dây này hỗ trợ bằng nhiều ngôn ngữ, bao gồm tiếng Việt, có thể tư vấn cho bạn về quyền lợi, khiếu nại, và hỗ trợ sắp xếp chỗ ở tạm thời hoặc pháp lý nếu cần thiết. Đây là kênh hỗ trợ đáng tin cậy nhất dành cho bạn tại Đài Loan.",
+            "Khi bạn gặp tranh chấp lao động hoặc bị đối xử bất công tại Đài Loan, hãy ngay lập tức gọi đến Đường dây nóng tư vấn khiếu nại lao động 1955 (miễn phí, hoạt động 24/24). Đường dây này hỗ trợ bằng nhiều ngôn ngữ, bao gồm tiếng Việt, có thể tư vấn cho bạn về quyền lợi, khiếu nại, và cung cấp nơi bảo vệ hoặc chuyển đến cơ quan hỗ trợ pháp lý khi cần thiết. Đây là kênh hỗ trợ đáng tin cậy nhất dành cho bạn tại Đài Loan.",
         },
         {
           question:
-            "Nếu tôi gặp tranh chấp lao động hoặc bị đối xử không công bằng thì phải làm gì?",
+            "Người Việt tại Đài Loan có cần đóng thuế không? Cách khai báo thuế?",
           answer01:
-            "Người Việt tại Đài Loan khi khai báo thuế được phân thành hai nhóm: Nhóm đã có CCCD Đài Loan hoặc Nhóm chỉ có thẻ cư trú, trong đó lại chia thành: Người cư trú tại Đài Loan đủ 183 ngày trở lên/ năm, Người cư trú chưa đủ 183 ngày/năm tại Đài Loan. Chi tiết vui lòng tham khảo quy định cụ thể của Cục Thuế địa phương nơi bạn sinh sống để thực hiện đúng quy định.",
+            "Người Việt tại Đài Loan được phân thành hai nhóm: Nhóm đã có CCCD Đài Loan hoặc Nhóm chỉ có thẻ cư trú, trong đó lại chia thành: Người cư trú tại Đài Loan đủ 183 ngày trở lên/ năm, Người cư trú chưa đủ 183 ngày/năm tại Đài Loan. Khai báo nội dung cụ thể,vui lòng tham khảo quy định cụ thể của Cục Thuế địa phương nơi bạn sinh sống để thực hiện đúng quy định.",
           answer02:
             "<a href='https://news.immigration.gov.tw/NewsSection/Detail/8C6CC7D0-B793-49BC-AF28-BF33EBBCD025' target='_blank'>Tham khảo thông tin tại</a> ",
         },
@@ -118,17 +118,17 @@ export default {
           question:
             "Nếu muốn thường xuyên cập nhật thông tin mới, tôi có thể theo dõi qua các kênh nào?",
           answer01:
-            "Ngoài các phương tiện truyền thông như báo chí, tạp chí, bạn có thể truy cập vào <a href='https://ifi.immigration.gov.tw/wSite/mp?mp=1' target='_blank'>Trang phát triển  bồi dưỡng năng</a>lực cho Tân di dân do Sở Di dân Đài Loan quản lý.",
+            "Ngoài các phương tiện truyền thông như báo chí, tạp chí, bạn có thể truy cập vào <a href='https://ifi.immigration.gov.tw/wSite/mp?mp=1' target='_blank'>Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới</a>do Sở Di dân Đài Loan quản lý.",
           answer02:
-            "Trang này cung cấp thông tin mới nhất liên quan đến: hỗ trợ đời sống cho người nước ngoài, bồi dưỡng năng lực việc làm, giáo dục – văn hóa, phúc lợi y tế, dịch vụ thông tin, quỹ hỗ trợ và hội nghị, …",
+            "Trang này cung cấp thông tin mới nhất liên quan đến: hỗ trợ đời sống cho người nước ngoài, bồi dưỡng năng lực việc làm, giáo dục – văn hóa, phúc lợi y tế, dịch vụ thông tin …",
           answer03:
-            "Ngoài ra, bạn cũng có thể tham gia nhóm LINE có tên “Trang phát triển bồi dưỡng năng lực cho Tân di dân”. Chọn “Tài khoản Official” → “Trang chủ”, tìm kiếm ID: @ifitw, sau đó chọn “Thêm” để tham gia nhóm.",
+            "Ngoài ra, bạn cũng có thể tham gia nhóm LINE có tên “Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới“. Chọn “Tài khoản Official” → “Trang chủ”, tìm kiếm ID: @ifitw, sau đó chọn “Thêm” để tham gia nhóm.",
         },
         {
           question:
             "Tôi gặp vấn đề pháp luật liên quan đến cư trú và lưu trú, làm thế nào để được hỗ trợ?",
           answer01:
-            "Ngoài các phương tiện truyền thông như báo chí, tạp chí, bạn có thể truy cập vào Trang phát triển  bồi dưỡng năng lực cho Tân di dân do Sở Di dân Đài Loan quản lý. Trang này cung cấp thông tin mới nhất liên quan đến: hỗ trợ đời sống cho người nước ngoài, bồi dưỡng năng lực việc làm, giáo dục – văn hóa, phúc lợi y tế, dịch vụ thông tin, quỹ hỗ trợ và hội nghị, …",
+            "Bạn có thể đến trực tiếp các văn phòng của Sở di dân tại các huyện, thành phố để được tư vấn hoặc gọi điện để yêu cầu hỗ trợ.",
           answer02:
             "Thông tin liên lạc tham khảo trên<a href='https://www.immigration.gov.tw/5475/5478/141386/127061/127076/' target='_blank'>Trang thông tin của Sở di dân Đài Loan</a>",
         },

@@ -50,7 +50,7 @@ const infos = ref([
   },
   {
     title: "Thông tin việc làm",
-    desc: "(Trang phát triển bồi dưỡng năng lực Tân di dân)",
+    desc: "(Mạng thông tin phát triễn bồi dưỡng năng Dân trú mớ)",
     img: new URL("@/assets/images/info_bg04.jpg", import.meta.url).href,
     alt: "Thông tin việc làm",
   },

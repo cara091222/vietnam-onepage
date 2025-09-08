@@ -7,13 +7,7 @@
           Về đội ngũ chuyên viên kinh doanh người Việt
         </h2>
         <p class="desc">
-          Chúng tôi thấu hiểu nhu cầu của cộng đồng người Việt tại Đài Loan, và
-          luôn sẵn sàng mang đến các sản phẩm bảo hiểm đa dạng cùng dịch vụ tận
-          tâm.Bạn có thắc mắc về bảo hiểm y tế, kế hoạch nghỉ hưu, quản lý tài
-          sản hoặc vấn đề trong cuộc sống, hãy liên hệ hoặc đặt lịch hẹn với
-          chuyên viên tư vấn của chúng tôi. Chúng tôi luôn lắng nghe và sẵn sàng
-          giải đáp, hỗ trợ bạn an tâm phát triển ổn định, vững chắc hơn tại Đài
-          Loan!
+          Bạn có bất kỳ thắc mắc về bảo hiểm y tế, kế hoạch nghỉ hưu, quản lý tài sản hoặc các vấn đề trong cuộc sống, hãy liên hệ với chúng tôi bất cứ lúc nào. Hoặc đặt lịch hẹn với chuyên viên tư vấn của chúng tôi theo đường link dưới đây.
         </p>
       </div>
       <div class="consultant-swiper-wrap">
@@ -46,12 +40,12 @@
               <div class="content">
                 <div class="year-wrap">
                   <div class="year-item">
-                    <p class="title">ở Đài Loan</p>
+                    <p class="title">Sống tại <br>Đài Loan</p>
                     <p class="year">{{ slide.residence }}</p>
                     <p class="unit">năm</p>
                   </div>
                   <div class="year-item">
-                    <p class="title">Thâm niên</p>
+                    <p class="title">làm việc <br> tại Cathay</p>
                     <p class="year">{{ slide.seniority }}</p>
                     <p class="unit">năm</p>
                   </div>
@@ -66,8 +60,9 @@
       </div>
       <div class="btn-wrap">
         <a
-          href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=c9a559d2-7aab-4f13-a6ed-e7e9c52aec87&redirect_uri=https%3A%2F%2Fforms.office.com%2Flanding&state=eyJ2ZXJzaW9uIjoxLCJkYXRhIjp7IklkZW50aXR5UHJvdmlkZXIiOiJBUVY4SEg1ZHBxYXdmTUcyVkpzU0V4T3pHbkNLRWdKd3pjWG44MVk5T3RNbDVRYkxuWXV6VWs5NUpGZkIzMVZzZDdjQXYyQVA5azRLcXh4LU9seFVRSVEiLCIucmVkaXJlY3QiOiJodHRwczovL2Zvcm1zLm9mZmljZS5jb20vUGFnZXMvRGVzaWduUGFnZVYyLmFzcHg_c3VicGFnZT1kZXNpZ24mdG9rZW49YmZjNTJiOWE3NmM0NDA2MWI4NGYyNWRjMmZjNzdkMGMmaWQ9MVMwOG1oT2c4MEstdWU2VmJsSWlfUlhkY011bklZZERrZm8tNnNpN1BxSlVOMGMxTkVsWU16RlpTbGhITnpCS1UxUXhNRVpCT0ZWT1NDNHUiLCIueHNyZiI6IkFRY29kdHRmalZEVS10NVBsY2dZY1JucHM4a1NLWG03cUlSOFJaU01acHk4MjB6M09UMEsxc3F1WTJZTUF4SEZDTl9lLVBPWUJ5WklWXzl4ZnFLSGJRY0pyTFh5SjlsbDMwOGx0c1NBRmkwZmhKTVdKM21ZaDdBWTNubUF4MU9hLVEiLCJPcGVuSWRDb25uZWN0LkNvZGUuUmVkaXJlY3RVcmkiOiJBY2hKLXRPNFEwdk5Od3pCM3ZtbzhXZUctQUJCU1Ruc2FJZVBHaEpQVXlrQ0UyQmI0V0h1NEVrSy1MYVRVSS1hUlc3clNrNlJhUTFVZFpfMUxCTXVhQTR3WDl2X296eWs2ajYxVXNhS1J1M3VhQ1NxbGlGbHhkWHFzNU51U0tIZmZBIn19&response_type=code&scope=openid%20profile&response_mode=form_post&nonce=638917102964437588.MTFiY2NiYTQtNGMwZi00OTYxLTlmNWItYjZlNmE3NTc3MDI2N2RkZGVhNGYtNDFhNS00MDY3LWJmNTItMzIwM2YzN2RkNWQ0&msafed=0&x-client-SKU=ID_NET9_0&x-client-ver=8.9.0.0"
+          href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
           class="btn-main"
+          target="_blank"
         >
           <div class="btn">Hẹn lịch tư vấn</div>
           <svg
@@ -156,32 +151,32 @@ import "@/assets/plugins/parallax.js";
 
 const swiper = [
   {
-    img: new URL("@/assets/images/consultant_01.png", import.meta.url).href,
+    img: new URL("@/assets/images/鄧秋萱_Đặng ThịThuHuyên.jpg", import.meta.url).href,
     name: "Đặng Thị Thu Huyên",
     residence: "20",
     seniority: "7.5",
     desc: "Kiến thức chuyên môn mang đến cho bạn sự an tâm, dịch vụ tận tâm giúp bạn yên lòng, và sự thấu hiểu khiến bạn tin cậy.",
   },
   {
-    img: new URL("@/assets/images/consultant_01.png", import.meta.url).href,
+    img: new URL("@/assets/images/張皓銘_TrươngHàoMinh.jpg", import.meta.url).href,
     name: "Trương Hào Minh",
     residence: "12",
     seniority: "2.5",
-    desc: "Một tư vấn viên bảo hiểm thân thiện, nhiệt tình, luôn tận tâm tư vấn bảo hiểm phù hợp cho mỗi khách hàng ",
+    desc: "Một tư vấn viên bảo hiểm thân thiện, năng suất, luôn tận tâm tư vấn gói bảo hiểm phù hợp cho mỗi khách hàng.",
   },
   {
-    img: new URL("@/assets/images/consultant_01.png", import.meta.url).href,
-    name: "Trương Hào Minh",
+    img: new URL("@/assets/images/謝河江_TạHàGiang.jpg", import.meta.url).href,
+    name: "Tạ Hà Giang",
     residence: "12",
     seniority: "5",
     desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Catthay. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
   },
   {
-    img: new URL("@/assets/images/consultant_01.png", import.meta.url).href,
-    name: "Tạ Hà Giang",
-    residence: "20",
-    seniority: "2.5",
-    desc: "Một tư vấn viên bảo hiểm thân thiện, nhiệt tình, luôn tận tâm tư vấn bảo hiểm phù hợp cho mỗi khách hàng ",
+    img: new URL("@/assets/images/武美君_VũMaiThương.jpg", import.meta.url).href,
+    name: "Vũ Mai Thương",
+    residence: "18",
+    seniority: "5",
+    desc: "Hãy an tâm lựa chọn Cathay. An tâm có Mai Thương phục  vụ chuyên nghiệp, hiệu quả và nhiệt tình, tư vấn gói bảo hiểm phù hợp nhất với nhu cầu của bạn.",
   },
 ];
 
