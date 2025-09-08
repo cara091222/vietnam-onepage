@@ -151,28 +151,28 @@ import "@/assets/plugins/parallax.js";
 
 const swiper = [
   {
-    img: new URL("@/assets/images/鄧秋萱_Đặng ThịThuHuyên.jpg", import.meta.url).href,
+    img: new URL("@/assets/images/con_DangThiThuHuyen.jpg", import.meta.url).href,
     name: "Đặng Thị Thu Huyên",
     residence: "20",
     seniority: "7.5",
     desc: "Kiến thức chuyên môn mang đến cho bạn sự an tâm, dịch vụ tận tâm giúp bạn yên lòng, và sự thấu hiểu khiến bạn tin cậy.",
   },
   {
-    img: new URL("@/assets/images/張皓銘_TrươngHàoMinh.jpg", import.meta.url).href,
+    img: new URL("@/assets/images/con_TruongHaoMinh.jpg", import.meta.url).href,
     name: "Trương Hào Minh",
     residence: "12",
     seniority: "2.5",
     desc: "Một tư vấn viên bảo hiểm thân thiện, năng suất, luôn tận tâm tư vấn gói bảo hiểm phù hợp cho mỗi khách hàng.",
   },
   {
-    img: new URL("@/assets/images/謝河江_TạHàGiang.jpg", import.meta.url).href,
+    img: new URL("@/assets/images/con_TaHaGiang.jpg", import.meta.url).href,
     name: "Tạ Hà Giang",
     residence: "12",
     seniority: "5",
     desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Catthay. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
   },
   {
-    img: new URL("@/assets/images/武美君_VũMaiThương.jpg", import.meta.url).href,
+    img: new URL("@/assets/images/con_VuMaiThuong.jpg", import.meta.url).href,
     name: "Vũ Mai Thương",
     residence: "18",
     seniority: "5",
