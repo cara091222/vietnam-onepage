@@ -68,7 +68,7 @@
                   </div>
                   <p class="text">{{ tab.text }}</p>
                 </div>
-                <p class="desc">{{ tab.desc }}</p>
+                <p class="desc" v-html="tab.desc"></p>
               </div>
             </template>
           </div>
@@ -143,7 +143,7 @@ export default {
           number: "150",
           unit: "+",
           text: "điểm kinh doanh",
-          desc: "Với tầm nhìn trở thành tổ chức tài chính hàng đầu khu vực Châu Á – Thái Bình Dương, trong đó Cathay Life Việt Nam đã có mặt tại Việt Nam 17 năm (đính kèm link), với hơn 150 điểm kinh doanh trên toàn quốc.",
+          desc: "Với tầm nhìn trở thành tổ chức tài chính hàng đầu khu vực Châu Á – Thái Bình Dương, trong đó <a href='https://www.cathaylife.com.vn/cathay/' target='_blank'>Cathay Life Việt Nam</a> đã có mặt tại Việt Nam 17 năm, với hơn 150 điểm kinh doanh trên toàn quốc.",
         },
         {
           id: "tab4",
@@ -591,6 +591,12 @@ export default {
           width: 100%;
         }
       }
+
+      a {
+          font-weight: bold;
+          color: var(--color-main);
+          text-decoration: underline;
+        }
     }
   }
 
