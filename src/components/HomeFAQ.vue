@@ -92,7 +92,7 @@ export default {
         },
         {
           question:
-            "Tôi có nhu cầu hỗ trợ về cuộc sống tại Đài Loan, như thị thực, đổi bằng lái xe quốc tế, công việc hoặcnuôi dạy con cái, có thể tìm đến ai tư vấn ?" ,         
+            "Tôi có nhu cầu hỗ trợ về cuộc sống tại Đài Loan, như thị thực, đổi bằng lái xe quốc tế, công việc hoặc, nuôi dạy con cái, có thể tìm đến ai tư vấn ?" ,         
           answer01:          
             "Nếu bạn có nhu cầu liên quan đến thị thực, cư trú, việc làm, giáo dục – văn hóa, thuế, bảo hiểm y tế, giao thông (đổi bằng lái xe), dịch vụ việc làm, y tế – sức khỏe, an toàn cá nhân, nuôi dạy con cái, dịch vụ phúc lợi, tư vấn pháp lý hoặc các vấn đề đời sống khác, có thể gọi đến Đường dây nóng tư vấn cho người nước ngoài tại Đài Loan – 1990 (miễn phí).",
           answer02:
@@ -118,10 +118,8 @@ export default {
           question:
             "Nếu muốn thường xuyên cập nhật thông tin mới, tôi có thể theo dõi qua các kênh nào?",
           answer01:
-            "Ngoài các phương tiện truyền thông như báo chí, tạp chí, bạn có thể truy cập vào <a href='https://ifi.immigration.gov.tw/wSite/mp?mp=1' target='_blank'>Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới</a>do Sở Di dân Đài Loan quản lý.",
+            "Ngoài các phương tiện truyền thông như báo chí, tạp chí, bạn có thể truy cập vào <a href='https://ifi.immigration.gov.tw/wSite/mp?mp=1' target='_blank'>Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới</a> do Sở Di dân Đài Loan quản lý. Trang này cung cấp thông tin mới nhất liên quan đến: hỗ trợ đời sống cho người nước ngoài, bồi dưỡng năng lực việc làm, giáo dục – văn hóa, phúc lợi y tế, dịch vụ thông tin …",
           answer02:
-            "Trang này cung cấp thông tin mới nhất liên quan đến: hỗ trợ đời sống cho người nước ngoài, bồi dưỡng năng lực việc làm, giáo dục – văn hóa, phúc lợi y tế, dịch vụ thông tin …",
-          answer03:
             "Ngoài ra, bạn cũng có thể tham gia nhóm LINE có tên “Mạng thông tin phát triễn bồi dưỡng năng Dân trú mới“. Chọn “Tài khoản Official” → “Trang chủ”, tìm kiếm ID: @ifitw, sau đó chọn “Thêm” để tham gia nhóm.",
         },
         {

@@ -169,7 +169,7 @@ const swiper = [
     name: "Tạ Hà Giang",
     residence: "12",
     seniority: "5",
-    desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Catthay. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
+    desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Cathay. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
   },
   {
     img: new URL("@/assets/images/con_VuMaiThuong.jpg", import.meta.url).href,
