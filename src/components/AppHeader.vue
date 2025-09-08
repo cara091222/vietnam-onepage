@@ -19,9 +19,9 @@
             <li class="main-item">
               <a class="main-link" href="#HomeFAQ">FAQ</a>
             </li>
-            <li class="main-item">
+            <!-- <li class="main-item">
               <a class="main-link" href="#HomeEvent">Hoạt động</a>
-            </li>
+            </li> -->
           </ul>
           <div class="contact-btn">
             <a

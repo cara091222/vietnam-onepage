@@ -100,7 +100,7 @@
     <HomeInfo />
     <HomeSwiper />
     <HomeFAQ />
-    <HomeEvent />
+    <!-- <HomeEvent /> -->
     <div class="copyright">© Cathay Life Insurance. All rights reserved.</div>
     <a href="#" class="page-top">
       <div class="img">
