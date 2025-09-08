@@ -25,7 +25,7 @@
                 :src="item.src"
                 :alt="item.alt"
                 class="desk-bg"
-                :style="{ objectPosition: index === 0 ? '90% 0' : '50% 50%' }"
+                :style="{ objectPosition: index === 0 ? '87.5% 0' : '50% 50%' }"
               />
             </div>
           </div>
