@@ -24,12 +24,8 @@
             </li> -->
           </ul>
           <div class="contact-btn">
-            <a
-              href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
-              class="btn-main"
-              target="_blank"
-              >Liên hệ</a
-            >
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
+              class="btn-main" target="_blank">Liên hệ</a>
           </div>
           <div class="nav-hamburger">
             <span></span>
@@ -63,7 +59,7 @@ export default {
     });
 
     // 單頁錨點
-    if (window.location.pathname === "/") {
+    jQuery(document).ready(function () {
       jQuery(".main-link[href^='#']").on("click", function (e) {
         const target = jQuery(this.getAttribute("href"));
         if (target.length) {
@@ -75,7 +71,8 @@ export default {
           );
         }
       });
-    }
+    });
+
   },
 };
 </script>
@@ -207,7 +204,7 @@ export default {
 
       @include media-down(lg) {
         position: fixed;
-        bottom: 10px;
+        bottom: 20px;
         left: 0;
         width: 100%;
         height: 50px;
@@ -218,7 +215,6 @@ export default {
           width: 90%;
           height: 100%;
           margin: auto;
-          // border-radius: 0;
           padding: 0;
 
           @include media-down(lg) {
@@ -248,7 +244,7 @@ export default {
         cursor: pointer;
         top: 0rem;
 
-        > span {
+        >span {
           width: 25px;
           height: 3px;
           position: absolute;
@@ -261,15 +257,15 @@ export default {
           top: calc(50% - ((5.5px)) + -1px);
         }
 
-        > span:nth-child(1) {
+        >span:nth-child(1) {
           top: calc(50% - ((5.5px)) + -3px);
         }
 
-        > span:nth-child(2) {
+        >span:nth-child(2) {
           top: calc(50% - ((5.5px)) + 3px);
         }
 
-        > span:nth-child(3) {
+        >span:nth-child(3) {
           top: calc(50% - ((5.5px)) + 9px);
         }
       }
