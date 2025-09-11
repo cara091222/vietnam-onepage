@@ -40,12 +40,12 @@
               <div class="content">
                 <div class="year-wrap">
                   <div class="year-item">
-                    <p class="title">Sống tại <br>Đài Loan</p>
+                    <p class="title">Sống tại<br>Đài Loan</p>
                     <p class="year">{{ slide.residence }}</p>
                     <p class="unit">năm</p>
                   </div>
                   <div class="year-item">
-                    <p class="title">làm việc <br> tại Cathay</p>
+                    <p class="title">làm việc<br>tại Cathay</p>
                     <p class="year">{{ slide.seniority }}</p>
                     <p class="unit">năm</p>
                   </div>

@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:zip": "vue-cli-service build && cd dist && zip -r ../dist.zip . -x \"__MACOSX\" -x \".*\""
+    "build": "vue-cli-service build && npm run clean-dist",
+    "clean-dist": "rimraf dist/**/.DS_Store dist/**/Thumbs.db",
+    "build:zip": "npm run build && cd dist && zip -r ../dist.zip . -x \"__MACOSX\" -x \".*\""
   },
   "dependencies": {
     "core-js": "^3.8.3",

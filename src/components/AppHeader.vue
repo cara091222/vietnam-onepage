@@ -25,7 +25,8 @@
           </ul>
           <div class="contact-btn">
             <a href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
-              class="btn-main" target="_blank">Liên hệ</a>
+              class="btn-main" target=" blank">Liên hệ
+            </a>
           </div>
           <div class="nav-hamburger">
             <span></span>
@@ -59,20 +60,21 @@ export default {
     });
 
     // 單頁錨點
-    jQuery(document).ready(function () {
-      jQuery(".main-link[href^='#']").on("click", function (e) {
-        const target = jQuery(this.getAttribute("href"));
-        if (target.length) {
-          e.preventDefault();
-          jQuery("html, body").animate(
-            { scrollTop: target.offset().top },
-            800,
-            "swing"
-          );
-        }
-      });
-    });
+    jQuery(".main-link[href^='#']").on("click", function (e) {
+      const target = jQuery(this.getAttribute("href"));
+      if (target.length) {
+        e.preventDefault();
+        jQuery("html, body").animate(
+          { scrollTop: target.offset().top },
+          800,
+          "swing"
+        );
 
+        // 點擊後自動關閉選單
+        jQuery(".nav-hamburger").removeClass("active");
+        jQuery(".app-container").removeClass("menu-show");
+      }
+    });
   },
 };
 </script>
