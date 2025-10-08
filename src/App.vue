@@ -12,7 +12,12 @@
             >
               <div class="container-share kv-container">
                 <div class="en-title-svg animation__el fadeUp">
-                  <img src="@/assets/images/en_title.png" alt="" />
+                  <img class="tree" src="@/assets/images/tree.png" alt="">
+                  <img
+                    class="title"
+                    src="@/assets/images/en_title.png"
+                    alt=""
+                  />
                 </div>
                 <h1 class="title animation__el fadeUp delay__750">
                   {{ item.title }}
@@ -101,6 +106,7 @@
     <HomeSwiper />
     <HomeFAQ />
     <!-- <HomeEvent /> -->
+    <!-- <AnimationBg /> -->
     <div class="copyright">© Cathay Life Insurance. All rights reserved.</div>
     <a href="#" class="page-top">
       <div class="img">
@@ -143,6 +149,7 @@ import HomeInfo from "./components/HomeInfo.vue";
 import HomeSwiper from "./components/HomeSwiper.vue";
 import HomeFAQ from "./components/HomeFAQ.vue";
 import HomeEvent from "./components/HomeEvent.vue";
+import AnimationBg from "./components/AnimationBg.vue";
 
 const banner = [
   {
@@ -333,9 +340,24 @@ onMounted(async () => {
                 width: 100%;
                 height: 100%;
                 max-width: 755px;
+                @include d-flex(start,start,column);
 
                 @include media-down(xxl) {
                   margin: auto;
+                }
+
+                .tree {
+                  width: 100px;
+                  height: auto;
+                  margin-bottom: -20px;
+
+                  @include media-down(xxl) {
+                    margin: auto;
+                  }
+
+                  @include media-down(sm) {
+                    width: 70px;
+                  }
                 }
 
                 img {

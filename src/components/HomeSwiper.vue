@@ -40,12 +40,12 @@
               <div class="content">
                 <div class="year-wrap">
                   <div class="year-item">
-                    <p class="title">Sống tại<br>Đài Loan</p>
+                    <p class="title">Sống tại Đài Loan</p>
                     <p class="year">{{ slide.residence }}</p>
                     <p class="unit">năm</p>
                   </div>
                   <div class="year-item">
-                    <p class="title">làm việc<br>tại Cathay</p>
+                    <p class="title">làm việc tại Cathay Life</p>
                     <p class="year">{{ slide.seniority }}</p>
                     <p class="unit">năm</p>
                   </div>
@@ -169,14 +169,14 @@ const swiper = [
     name: "Tạ Hà Giang",
     residence: "12",
     seniority: "5",
-    desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Cathay. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
+    desc: "Tôi đến từ Bảo Hiểm Nhân Thọ Cathay Life. Tôi mang đến cho bạn một sự phục vụ tận tâm, một quy hoạch bảo hiểm chuyên nghiệp để bạn có thể an tâm lựa chọn.",
   },
   {
     img: new URL("@/assets/images/con_VuMaiThuong.jpg", import.meta.url).href,
     name: "Vũ Mai Thương",
     residence: "18",
     seniority: "5",
-    desc: "Hãy an tâm lựa chọn Cathay. An tâm có Mai Thương phục  vụ chuyên nghiệp, hiệu quả và nhiệt tình, tư vấn gói bảo hiểm phù hợp nhất với nhu cầu của bạn.",
+    desc: "Hãy an tâm lựa chọn Cathay Life. An tâm có Mai Thương phục  vụ chuyên nghiệp, hiệu quả và nhiệt tình, tư vấn gói bảo hiểm phù hợp nhất với nhu cầu của bạn.",
   },
 ];
 
@@ -208,7 +208,7 @@ onMounted(async () => {
         slidesPerView: 3,
         spaceBetween: 40,
       },
-      1380: {
+      1560: {
         // 1380~1920 以上
         slidesPerView: 4,
         spaceBetween: 50,
@@ -326,6 +326,10 @@ onMounted(async () => {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
+            // @include media-down(xs) {
+            //     grid-template-columns: repeat(1, 1fr);
+            //   }
+
             .year-item {
               @include d-flex(center, center, column);
 
@@ -337,6 +341,7 @@ onMounted(async () => {
                 font-weight: 700;
                 line-height: 22px;
                 letter-spacing: 1px;
+                padding: 0 10px;
               }
 
               .year {
