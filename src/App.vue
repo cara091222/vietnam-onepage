@@ -10,28 +10,39 @@
               :key="index"
               class="swiper-slide kv-swiper-slide"
             >
-              <div class="container-share kv-container">
-                <div class="en-title-svg animation__el fadeUp">
-                  <img class="tree" src="@/assets/images/tree.png" alt="">
-                  <img
-                    class="title"
-                    src="@/assets/images/en_title.png"
-                    alt=""
-                  />
+              <a :href="item.link" target="blank">
+                <div class="container-share kv-container">
+                  <div class="en-title-svg animation__el fadeUp">
+                    <img class="tree" src="@/assets/images/tree.png" alt="" />
+                    <img
+                      class="title"
+                      src="@/assets/images/en_title.png"
+                      alt=""
+                    />
+                  </div>
+                  <h1 class="title animation__el fadeUp delay__750">
+                    {{ item.title }}
+                  </h1>
+                  <h2 class="subtitle animation__el fadeUp delay__1000">
+                    {{ item.subtitle }}
+                  </h2>
+                  <!-- <div class="btn">
+                    <a href="">Tham gia ngay</a>
+                  </div> -->
                 </div>
-                <h1 class="title animation__el fadeUp delay__750">
-                  {{ item.title }}
-                </h1>
-                <h2 class="subtitle animation__el fadeUp delay__1000">
-                  {{ item.subtitle }}
-                </h2>
-              </div>
-              <img
-                :src="item.src"
-                :alt="item.alt"
-                class="desk-bg"
-                :style="{ objectPosition: index === 0 ? '87.5% 0' : '50% 50%' }"
-              />
+                <img
+                  :src="item.src"
+                  :alt="item.alt"
+                  class="desk-bg"
+                  :style="item.style"
+                />
+                <img
+                  :src="item.mobile"
+                  :alt="item.alt"
+                  class="mobile-bg"
+                  :style="item.style"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -154,24 +165,43 @@ import AnimationBg from "./components/AnimationBg.vue";
 const banner = [
   {
     src: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
-    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    mobile: new URL("@/assets/images/kv_banner01.jpg", import.meta.url).href,
+    alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
     title: "Nền tảng dành riêng cho người Việt",
-    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
+    subtitle:
+      "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
+    link: "/#",
+    style: { objectPosition: "87.5% 0" },
+  },
+  {
+    src: new URL("@/assets/images/kv_banner04.jpg", import.meta.url).href,
+    mobile: new URL("@/assets/images/kv_banner04_mobile.jpg", import.meta.url)
+      .href,
+    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    title: "Tháng 11–12: Đặt hẹn tư vấn ngay",
+    subtitle: "cCơ hội trúng thưởng đến 100,000 TWD",
+    link: "/#",
+    style: { objectPosition: "50% 50%" },
   },
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/kv_banner02_mobile.jpg", import.meta.url).href,
-    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    mobile: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
+    alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
     title: "Nền tảng dành riêng cho người Việt",
-    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
+    subtitle:
+      "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
+    link: "/#",
+    style: { objectPosition: "50% 50%" },
   },
   {
     src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    // mobile: new URL("@/assets/images/kv_banner03_mobile.jpg", import.meta.url).href,
-    alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
+    mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+    alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
     title: "Nền tảng dành riêng cho người Việt",
-    subtitle: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan ！",
+    subtitle:
+      "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
+    link: "/#",
+    style: { objectPosition: "50% 50%" },
   },
 ];
 
@@ -203,10 +233,10 @@ onMounted(async () => {
     modules: [Autoplay, EffectFade],
     loop: true,
     speed: 1500,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -254,6 +284,19 @@ onMounted(async () => {
       },
     },
   });
+
+  const getObjectPosition = (index) => {
+    switch (index) {
+      case 0:
+        return "87.5% 0"; 
+      case 1:
+        return "50% 350%"; 
+      case 2:
+        return "50% 50%"; 
+      default:
+        return "50% 50%"; 
+    }
+  };
 
   // 點擊回頂端
   jQuery(".page-top").on("click", function (e) {
@@ -339,24 +382,24 @@ onMounted(async () => {
               .en-title-svg {
                 width: 100%;
                 height: 100%;
-                max-width: 755px;
-                @include d-flex(start,start,column);
+                max-width: 680px;
+                @include d-flex(start, start, column);
 
                 @include media-down(xxl) {
                   margin: auto;
                 }
 
                 .tree {
-                  width: 100px;
+                  width: 80px;
                   height: auto;
-                  margin-bottom: -20px;
+                  margin-bottom: 20px;
 
                   @include media-down(xxl) {
                     margin: auto;
                   }
 
                   @include media-down(sm) {
-                    width: 70px;
+                    width: 60px;
                   }
                 }
 
@@ -374,7 +417,7 @@ onMounted(async () => {
                 font-weight: 700;
                 line-height: 52px;
                 letter-spacing: 2px;
-                padding: 42px 0 20px 0;
+                padding: 0px 0 20px 0;
                 width: 60%;
 
                 @include media-down(xxl) {
@@ -417,17 +460,17 @@ onMounted(async () => {
               }
             }
 
-            // .desk-bg {
-            //   @include media-down(sm) {
-            //     display: none;
-            //   }
-            // }
+            .desk-bg {
+              @include media-down(sm) {
+                display: none;
+              }
+            }
 
-            // .mobile-bg {
-            //   @include media-down(sm) {
-            //     display: block;
-            //   }
-            // }
+            .mobile-bg {
+              @include media-down(sm) {
+                display: block;
+              }
+            }
 
             img {
               width: 100%;
@@ -485,10 +528,12 @@ onMounted(async () => {
           bottom: 15px;
           opacity: 0;
         }
+
         50% {
           bottom: 5px;
           opacity: 1;
         }
+
         100% {
           bottom: -5px;
           opacity: 0;
@@ -532,6 +577,7 @@ onMounted(async () => {
       @include media-down(md) {
         padding: 50px;
       }
+
       @include media-down(md) {
         padding: 30px;
       }
