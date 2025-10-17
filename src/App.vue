@@ -233,10 +233,10 @@ onMounted(async () => {
     modules: [Autoplay, EffectFade],
     loop: true,
     speed: 1500,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     effect: "fade",
     fadeEffect: {
       crossFade: true,
