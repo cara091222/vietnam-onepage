@@ -180,7 +180,7 @@ const banner = [
     alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
     title: "Tháng 11–12: Đặt hẹn tư vấn ngay",
     subtitle: "cCơ hội trúng thưởng đến 100,000 TWD",
-    link: "/#",
+    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
     style: { objectPosition: "50% 50%" },
   },
   {
@@ -193,16 +193,16 @@ const banner = [
     link: "/#",
     style: { objectPosition: "50% 50%" },
   },
-  {
-    src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
-    title: "Nền tảng dành riêng cho người Việt",
-    subtitle:
-      "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "/#",
-    style: { objectPosition: "50% 50%" },
-  },
+  // {
+  //   src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+  //   mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+  //   alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
+  //   title: "Nền tảng dành riêng cho người Việt",
+  //   subtitle:
+  //     "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
+  //   link: "/#",
+  //   style: { objectPosition: "50% 50%" },
+  // },
 ];
 
 const content = [
