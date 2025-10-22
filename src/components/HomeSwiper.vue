@@ -285,9 +285,9 @@ onMounted(async () => {
           overflow: hidden;
           position: relative;
 
-          @include media-down(jumbo) {
-            height: 360px;
-          }
+          // @include media-down(sm) {
+          //   height: 360px;
+          // }
 
           .name {
             @include d-flex(center, center, column);
