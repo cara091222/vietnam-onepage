@@ -117,7 +117,7 @@
     <HomeInfo />
     <HomeSwiper />
     <HomeFAQ />
-    <!-- <HomeEvent /> -->
+    <HomeEvent />
     <!-- <AnimationBg /> -->
     <div class="copyright">© Cathay Life Insurance. All rights reserved.</div>
     <a href="#" class="page-top">
@@ -171,7 +171,7 @@ const banner = [
     title: "Nền tảng dành riêng cho người Việt",
     subtitle:
       "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "/#",
+    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
     style: { objectPosition: "87.5% 0" },
   },
   {
@@ -180,11 +180,11 @@ const banner = [
       .href,
     alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
     title: "Tháng 11–12: Đặt hẹn tư vấn ngay",
-    subtitle: "cCơ hội trúng thưởng đến 100,000 TWD",
+    subtitle: "Cơ hội trúng thưởng đến 100,000 TWD",
     desc: "An tâm – May mắn – Cùng Cathay Life",
     link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
     style: { objectPosition: "50% 50%" },
-  },
+  }, 
   {
     src: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
     mobile: new URL("@/assets/images/kv_banner02.jpg", import.meta.url).href,
@@ -192,19 +192,19 @@ const banner = [
     title: "Nền tảng dành riêng cho người Việt",
     subtitle:
       "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "/#",
+    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
     style: { objectPosition: "50% 50%" },
   },
-  {
-    src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
-    alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
-    title: "Nền tảng dành riêng cho người Việt",
-    subtitle:
-      "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "/#",
-    style: { objectPosition: "50% 50%" },
-  },
+  // {
+  //   src: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+  //   mobile: new URL("@/assets/images/kv_banner03.jpg", import.meta.url).href,
+  //   alt: "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan",
+  //   title: "Nền tảng dành riêng cho người Việt",
+  //   subtitle:
+  //     "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
+  //   link: "/#",
+  //   style: { objectPosition: "50% 50%" },
+  // },
 ];
 
 const content = [
@@ -462,6 +462,10 @@ onMounted(async () => {
 
                 >span {
                   font-size: 20px;
+
+                  @include media-down(sm) {
+                    font-size: 16px;
+                  }
                 }
               }
             }

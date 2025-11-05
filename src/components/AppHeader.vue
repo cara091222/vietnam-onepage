@@ -19,12 +19,15 @@
             <li class="main-item">
               <a class="main-link" href="#HomeFAQ">FAQ</a>
             </li>
-            <!-- <li class="main-item">
+            <li class="main-item">
               <a class="main-link" href="#HomeEvent">Hoạt động</a>
-            </li> -->
+            </li>
           </ul>
           <div class="contact-btn">
-            <a href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
+            <!-- <a href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_RXdcMunIYdDkfo-6si7PqJUN0c1NElYMzFZSlhHNzBKU1QxMEZBOFVOSC4u&origin=lprLink&route=shorturl"
+              class="btn-main" target=" blank">Liên hệ
+            </a> -->
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl"
               class="btn-main" target=" blank">Liên hệ
             </a>
           </div>
