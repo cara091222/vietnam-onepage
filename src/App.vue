@@ -171,7 +171,7 @@ const banner = [
     title: "Nền tảng dành riêng cho người Việt",
     subtitle:
       "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
+    link: "https://www.cathaylife.com.tw/cathaylife/-/media/df3c4bd03fdf40b887e81c47aafb1772.pdf?sc_lang=zh-tw",
     style: { objectPosition: "87.5% 0" },
   },
   {
@@ -181,8 +181,8 @@ const banner = [
     alt: "có Bảo hiểm Nhân thọ Cathay an tâm cuộc sống tại Đài Loan",
     title: "Tháng 11–12: Đặt hẹn tư vấn ngay",
     subtitle: "Cơ hội trúng thưởng đến 100,000 TWD",
-    desc: "An tâm – May mắn – Cùng Cathay Life",
-    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
+    desc: "Công bố danh sách trúng thưởng",
+    link: "https://www.cathaylife.com.tw/cathaylife/-/media/df3c4bd03fdf40b887e81c47aafb1772.pdf?sc_lang=zh-tw",
     style: { objectPosition: "50% 50%" },
   }, 
   {
@@ -192,7 +192,7 @@ const banner = [
     title: "Nền tảng dành riêng cho người Việt",
     subtitle:
       "có Bảo hiểm Nhân thọ Cathay Life an tâm cuộc sống tại Đài Loan ！",
-    link: "https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl",
+    link: "https://www.cathaylife.com.tw/cathaylife/-/media/df3c4bd03fdf40b887e81c47aafb1772.pdf?sc_lang=zh-tw",
     style: { objectPosition: "50% 50%" },
   },
   // {

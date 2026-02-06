@@ -30,11 +30,11 @@
           </div>
           <div class="btn-wrap">
             <a
-              href="https://forms.office.com/pages/responsepage.aspx?id=1S08mhOg80K-ue6VblIi_bbejVplT-pEqclP0sutM8lUQTdFU1ZMTFY4UzFaRUYxV0MyNVJQUlRKMy4u&route=shorturl"
+              href="https://www.cathaylife.com.tw/cathaylife/news/activities/20260205_2025-vietnam-customer-platform-winners-list"
               class="btn-main"
               target="_blank"
             >
-              <div class="btn">Tham gia rút thăm trúng thưởng ngay</div>
+              <div class="btn">Công bố danh sách trúng thưởng</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
